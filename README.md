@@ -50,3 +50,24 @@ PowerShell:
 `powershell -ExecutionPolicy Bypass -File .\git_sync_and_push.ps1`
 
 The script fetches the existing remote `master`, merges it safely (including unrelated initial histories), and then pushes the project.
+
+## Automatic non-fast-forward fix
+
+This package includes a Git `post-commit` hook at `.git/hooks/post-commit`.
+When an external API commits changes and then runs `git push origin master`, the hook first fetches `origin/master`, incorporates remote history (including a GitHub-created initial README commit), and pushes the synchronized history. The API's following normal push should therefore succeed instead of returning a non-fast-forward / fetch-first error.
+
+### One-time manual preparation (recommended after extracting)
+
+Run either:
+
+```bat
+prepare_repo_for_push.bat
+```
+
+or:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\prepare_repo_for_push.ps1
+```
+
+After that, your API can keep using a normal `git push origin master`.

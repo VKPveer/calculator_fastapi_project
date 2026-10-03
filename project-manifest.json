@@ -11,6 +11,15 @@
     "tests/test_main.py",
     "requirements.txt",
     ".gitignore",
-    "README.md"
-  ]
+    "README.md",
+    "prepare_repo_for_push.bat",
+    "prepare_repo_for_push.ps1"
+  ],
+  "git": {
+    "remote_name": "origin",
+    "remote_url": "https://github.com/VKPveer/calculator_fastapi_project.git",
+    "branch": "master",
+    "auto_sync_hook": ".git/hooks/post-commit",
+    "push_strategy": "fetch + merge remote history + normal push (no force push)"
+  }
 }

@@ -1,0 +1,16 @@
+{
+  "project_name": "calculator_fastapi_project",
+  "project_type": "FastAPI",
+  "language": "Python",
+  "entrypoint": "app/main.py",
+  "run_command": "uvicorn app.main:app --reload",
+  "test_command": "pytest",
+  "files": [
+    "app/__init__.py",
+    "app/main.py",
+    "tests/test_main.py",
+    "requirements.txt",
+    ".gitignore",
+    "README.md"
+  ]
+}

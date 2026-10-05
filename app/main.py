@@ -43,3 +43,11 @@ def power(req: CalculationRequest):
         "b": req.b,
         "result": req.a ** req.b
     }
+
+@app.post("/square")
+def square(req: CalculationRequest):
+    return {
+        "operation": "square",
+        "a": req.a,
+        "result": req.a ** 2
+    }

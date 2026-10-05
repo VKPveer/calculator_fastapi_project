@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-05T13:04:10.327342+00:00",
+  "generated_at": "2026-10-05T14:50:50.024934+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "c6bf267f583c806f04457c48dd387f0f63f53df9"
+    "commit_sha": "a3c791e637cef926712f5f9f7a8be7366adb36ca"
   },
   "files": [
     {
@@ -16,7 +16,7 @@
       "language": "Python",
       "size": 0,
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "last_modified": "2026-10-05T13:04:06.531867+00:00",
+      "last_modified": "2026-10-05T14:50:40.060617+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -28,9 +28,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 1188,
-      "hash": "c1b9ab7daf405dc09e652ede540fce55597dc5e20711b3bb6922e77cdb2df5f4",
-      "last_modified": "2026-10-05T13:04:06.531867+00:00",
+      "size": 1354,
+      "hash": "8cd4c607a39f9dfcaa477eb3661aee119fe7ea5d522cfe2f701e2857f69896be",
+      "last_modified": "2026-10-05T14:50:40.607342+00:00",
       "classes": [
         {
           "name": "CalculationRequest",
@@ -97,6 +97,16 @@
           "async": false,
           "line_start": 39,
           "line_end": 45
+        },
+        {
+          "name": "square",
+          "signature": "square(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 48,
+          "line_end": 53
         }
       ],
       "symbols": [
@@ -177,6 +187,18 @@
           "language": "Python",
           "line_start": 39,
           "line_end": 45
+        },
+        {
+          "symbol_type": "function",
+          "name": "square",
+          "signature": "square(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 48,
+          "line_end": 53
         }
       ],
       "dependencies": [
@@ -203,9 +225,9 @@
       "extension": ".json",
       "type": "source",
       "language": "JSON",
-      "size": 7326,
-      "hash": "c56934403b40404a55e8ab3f9480a18241faf90d87e310153b8a7d2c775d2d44",
-      "last_modified": "2026-10-05T13:04:06.533881+00:00",
+      "size": 7918,
+      "hash": "e38c5b1219ab265266775ee094374b00cc8cd22d6862b4c9ecf238c4553d9bdf",
+      "last_modified": "2026-10-05T14:50:40.065618+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -219,7 +241,7 @@
       "language": "Python",
       "size": 395,
       "hash": "47290b043cad5fd0d309594d2aab5c75b78605c724eb24af0ea383d1e0c3073b",
-      "last_modified": "2026-10-05T13:04:06.534894+00:00",
+      "last_modified": "2026-10-05T14:50:40.066614+00:00",
       "classes": [],
       "functions": [
         {
@@ -287,9 +309,9 @@
       "task_run_id": "RUN-004",
       "git": {
         "branch": "main",
-        "commit_sha": "c6bf267f583c806f04457c48dd387f0f63f53df9"
+        "commit_sha": "a3c791e637cef926712f5f9f7a8be7366adb36ca"
       },
-      "mapped_at": "2026-10-05T18:34:09+05:30",
+      "mapped_at": "2026-10-05T20:20:49+05:30",
       "code_reference": null,
       "unresolved_code_reference": {
         "file": "sample_service.py",

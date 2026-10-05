@@ -1,25 +1,213 @@
 {
-  "project_name": "calculator_fastapi_project",
-  "project_type": "FastAPI",
-  "language": "Python",
-  "entrypoint": "app/main.py",
-  "run_command": "uvicorn app.main:app --reload",
-  "test_command": "pytest",
+  "schema_version": "1.1",
+  "project": {
+    "name": "calculator_fastapi_project",
+    "display_name": "Calculator FastAPI Project",
+    "type": "FastAPI REST API",
+    "language": "Python",
+    "framework": "FastAPI",
+    "version": "1.0.0",
+    "description": "A simple calculator REST API with add, subtract, multiply and divide endpoints."
+  },
+  "application": {
+    "entrypoint": "app/main.py",
+    "module": "app.main:app",
+    "run_command": "uvicorn app.main:app --reload",
+    "swagger_url": "http://127.0.0.1:8000/docs",
+    "test_command": "pytest"
+  },
+  "api_endpoints": [
+    {
+      "method": "GET",
+      "path": "/",
+      "purpose": "Health/root response"
+    },
+    {
+      "method": "POST",
+      "path": "/add",
+      "purpose": "Add two numbers"
+    },
+    {
+      "method": "POST",
+      "path": "/subtract",
+      "purpose": "Subtract two numbers"
+    },
+    {
+      "method": "POST",
+      "path": "/multiply",
+      "purpose": "Multiply two numbers"
+    },
+    {
+      "method": "POST",
+      "path": "/divide",
+      "purpose": "Divide two numbers with divide-by-zero validation"
+    },
+    {
+      "method": "POST",
+      "path": "/modulus",
+      "purpose": "Return the remainder after dividing the first number by the second number",
+      "status": "requested_change"
+    }
+  ],
+  "dependencies": {
+    "file": "requirements.txt",
+    "packages": [
+      "fastapi==0.118.0",
+      "uvicorn[standard]==0.37.0",
+      "pytest==8.4.2",
+      "httpx==0.28.1"
+    ]
+  },
+  "git": {
+    "repository_initialized": true,
+    "default_branch": "master",
+    "remote_name": "origin",
+    "remote_url": "https://github.com/VKPveer/calculator_fastapi_project.git",
+    "remote_tracking_branch": "origin/master",
+    "auto_sync_hook": ".git/hooks/post-commit",
+    "push_strategy": "fetch origin/master, merge remote history safely, then normal push",
+    "force_push_default": false,
+    "sync_scripts": [
+      "git_sync_and_push.bat",
+      "git_sync_and_push.ps1",
+      "prepare_repo_for_push.bat",
+      "prepare_repo_for_push.ps1"
+    ]
+  },
+  "structure": {
+    "source_directory": "app",
+    "test_directory": "tests",
+    "important_files": [
+      "app/__init__.py",
+      "app/main.py",
+      "tests/test_main.py",
+      "requirements.txt",
+      ".gitignore",
+      "README.md",
+      "project-manifest.json",
+      "git_sync_and_push.bat",
+      "git_sync_and_push.ps1",
+      "prepare_repo_for_push.bat",
+      "prepare_repo_for_push.ps1",
+      ".git/config",
+      ".git/HEAD",
+      ".git/hooks/post-commit"
+    ]
+  },
+  "github_upload": {
+    "include": [
+      "app/",
+      "tests/",
+      "requirements.txt",
+      ".gitignore",
+      "README.md",
+      "project-manifest.json",
+      "git_sync_and_push.bat",
+      "git_sync_and_push.ps1",
+      "prepare_repo_for_push.bat",
+      "prepare_repo_for_push.ps1"
+    ],
+    "exclude": [
+      ".venv/",
+      "__pycache__/",
+      ".pytest_cache/",
+      "*.pyc",
+      ".env"
+    ],
+    "note": "The .git directory is local repository metadata and is normally not uploaded as repository content to GitHub."
+  },
   "files": [
+    "requirements.txt",
+    ".git/index",
+    ".git/info/exclude",
+    ".git/COMMIT_EDITMSG",
+    ".git/hooks/post-commit",
+    ".git/description",
+    ".git/HEAD",
+    ".git/config",
     "app/__init__.py",
     "app/main.py",
     "tests/test_main.py",
-    "requirements.txt",
-    ".gitignore",
-    "README.md",
     "prepare_repo_for_push.bat",
-    "prepare_repo_for_push.ps1"
+    "git_sync_and_push.ps1",
+    "git_sync_and_push.bat",
+    "project-manifest.json",
+    ".gitignore",
+    "prepare_repo_for_push.ps1",
+    "README.md"
   ],
-  "git": {
-    "remote_name": "origin",
-    "remote_url": "https://github.com/VKPveer/calculator_fastapi_project.git",
+  "sha256": {
+    "requirements.txt": "af0e9082a187adef76c52765d9445cc1ef35b8f10f065994d2d3e326916e6423",
+    ".git/index": "d9d66ef085466b5262b7941151d1342faaab9ab61cb3b78f65452a6271c242b6",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/COMMIT_EDITMSG": "a78505b5b6e4767382a967f577d1a7b5d55ef6f124c520629883c046c5060dd4",
+    ".git/hooks/post-commit": "502c290ea170fa83eff85bbcdffc6030c0c89f24ebf76a56bccbf855a3f7f90e",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/HEAD": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+    ".git/config": "39f5d90033c6c02775ae009340988784415cc41667cbb06a7c885cbf553a3831",
+    "app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/main.py": "3081c78bcc348a5a7489d3e3781e1ebcc5e60f01e7dec84704b10dd463860143",
+    "tests/test_main.py": "d5c5702dd3a4b63c6e9baf805ac4bea838572dd1f6a4ba3ac25cc43fd212b6d4",
+    "prepare_repo_for_push.bat": "66786c238463a7992065ef7ca5ba5ff68f47d609de000ffcfdddc271ee4e2ebd",
+    "git_sync_and_push.ps1": "8f2300c14c0962794d04ade9f259eb770fc4da56f86267dab9796efcdc3abb81",
+    "git_sync_and_push.bat": "91a34ecee8bf392a7815237056ee52f50f8f39f220a21fa2d3179f7614436b57",
+    "project-manifest.json": "fa215bd40089d0f0c1dd507fea9420962ea31c3e3860abe782f097873635e1b6",
+    ".gitignore": "5e102d6e0ebac9d22a65955793939d2b19e122afd988f541dc6cec883b7e97c8",
+    "prepare_repo_for_push.ps1": "e9514f97602afb47fa47c662ace4f6c90442bd9a4fe5a84d8dd1ada02c1d4d80",
+    "README.md": "6c0c1c7504b7096713a8e3a5e7b39e982e2f11b2f33a23911717ddfab10c1226"
+  },
+  "manifest_purpose": "Test file-specific code updates and verify that only the intended project file is changed and pushed to the same path in GitHub.",
+  "execution": {
+    "mode": "apply_changes_and_push",
+    "apply_changes": true,
+    "commit_changes": true,
+    "push_changes": true,
     "branch": "master",
-    "auto_sync_hook": ".git/hooks/post-commit",
-    "push_strategy": "fetch + merge remote history + normal push (no force push)"
+    "remote": "origin",
+    "commit_message": "feat: add modulus endpoint from project manifest"
+  },
+  "file_changes": [
+    {
+      "path": "app/main.py",
+      "operation": "modify",
+      "reason": "Add a visible code change so the GitHub commit shows an update to app/main.py.",
+      "change_type": "append_code",
+      "anchor": "end_of_file",
+      "content": "\n\n@app.post(\"/modulus\")\ndef modulus(numbers: Numbers):\n    if numbers.b == 0:\n        raise HTTPException(status_code=400, detail=\"Cannot perform modulus by zero\")\n    return {\n        \"operation\": \"modulus\",\n        \"a\": numbers.a,\n        \"b\": numbers.b,\n        \"result\": numbers.a % numbers.b\n    }\n",
+      "expected_result": {
+        "endpoint": "POST /modulus",
+        "example_input": {
+          "a": 10,
+          "b": 3
+        },
+        "example_output_result": 1
+      }
+    }
+  ],
+  "validation": {
+    "must_change_only": [
+      "app/main.py"
+    ],
+    "must_not_change": [
+      "requirements.txt",
+      "README.md",
+      "tests/test_main.py",
+      ".gitignore",
+      ".git/"
+    ],
+    "commands": [
+      "git diff --name-only",
+      "git diff -- app/main.py",
+      "pytest"
+    ],
+    "expected_git_diff_files": [
+      "app/main.py"
+    ]
+  },
+  "git_update_expectation": {
+    "repository": "https://github.com/VKPveer/calculator_fastapi_project.git",
+    "branch": "master",
+    "expected_changed_file_on_github": "app/main.py",
+    "note": "The system processing this manifest must apply file_changes before commit/push. Merely uploading this JSON will only change the manifest file itself."
   }
 }

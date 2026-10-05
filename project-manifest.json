@@ -1,0 +1,301 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-10-05T13:04:10.327342+00:00",
+  "repository": {
+    "name": "calculator_fastapi_project",
+    "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
+    "branch": "master",
+    "commit_sha": "c6bf267f583c806f04457c48dd387f0f63f53df9"
+  },
+  "files": [
+    {
+      "path": "app/__init__.py",
+      "name": "__init__.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 0,
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "last_modified": "2026-10-05T13:04:06.531867+00:00",
+      "classes": [],
+      "functions": [],
+      "symbols": [],
+      "dependencies": []
+    },
+    {
+      "path": "app/main.py",
+      "name": "main.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 1188,
+      "hash": "c1b9ab7daf405dc09e652ede540fce55597dc5e20711b3bb6922e77cdb2df5f4",
+      "last_modified": "2026-10-05T13:04:06.531867+00:00",
+      "classes": [
+        {
+          "name": "CalculationRequest",
+          "line_start": 7,
+          "line_end": 9,
+          "methods": []
+        }
+      ],
+      "functions": [
+        {
+          "name": "root",
+          "signature": "root()",
+          "parameters": [],
+          "async": false,
+          "line_start": 13,
+          "line_end": 14
+        },
+        {
+          "name": "add",
+          "signature": "add(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 18,
+          "line_end": 19
+        },
+        {
+          "name": "subtract",
+          "signature": "subtract(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 23,
+          "line_end": 24
+        },
+        {
+          "name": "multiply",
+          "signature": "multiply(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 28,
+          "line_end": 29
+        },
+        {
+          "name": "divide",
+          "signature": "divide(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 33,
+          "line_end": 36
+        },
+        {
+          "name": "power",
+          "signature": "power(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 39,
+          "line_end": 45
+        }
+      ],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "CalculationRequest",
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 7,
+          "line_end": 9
+        },
+        {
+          "symbol_type": "function",
+          "name": "root",
+          "signature": "root()",
+          "parameters": [],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 14
+        },
+        {
+          "symbol_type": "function",
+          "name": "add",
+          "signature": "add(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 18,
+          "line_end": 19
+        },
+        {
+          "symbol_type": "function",
+          "name": "subtract",
+          "signature": "subtract(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 23,
+          "line_end": 24
+        },
+        {
+          "symbol_type": "function",
+          "name": "multiply",
+          "signature": "multiply(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 28,
+          "line_end": 29
+        },
+        {
+          "symbol_type": "function",
+          "name": "divide",
+          "signature": "divide(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 33,
+          "line_end": 36
+        },
+        {
+          "symbol_type": "function",
+          "name": "power",
+          "signature": "power(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 39,
+          "line_end": 45
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "fastapi.FastAPI",
+          "type": "from_import",
+          "category": "external"
+        },
+        {
+          "name": "fastapi.HTTPException",
+          "type": "from_import",
+          "category": "external"
+        },
+        {
+          "name": "pydantic.BaseModel",
+          "type": "from_import",
+          "category": "external"
+        }
+      ]
+    },
+    {
+      "path": "project-manifest.json",
+      "name": "project-manifest.json",
+      "extension": ".json",
+      "type": "source",
+      "language": "JSON",
+      "size": 7326,
+      "hash": "c56934403b40404a55e8ab3f9480a18241faf90d87e310153b8a7d2c775d2d44",
+      "last_modified": "2026-10-05T13:04:06.533881+00:00",
+      "classes": [],
+      "functions": [],
+      "symbols": [],
+      "dependencies": []
+    },
+    {
+      "path": "tests/test_main.py",
+      "name": "test_main.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 395,
+      "hash": "47290b043cad5fd0d309594d2aab5c75b78605c724eb24af0ea383d1e0c3073b",
+      "last_modified": "2026-10-05T13:04:06.534894+00:00",
+      "classes": [],
+      "functions": [
+        {
+          "name": "test_add",
+          "signature": "test_add()",
+          "parameters": [],
+          "async": false,
+          "line_start": 7,
+          "line_end": 10
+        },
+        {
+          "name": "test_divide_by_zero",
+          "signature": "test_divide_by_zero()",
+          "parameters": [],
+          "async": false,
+          "line_start": 13,
+          "line_end": 15
+        }
+      ],
+      "symbols": [
+        {
+          "symbol_type": "function",
+          "name": "test_add",
+          "signature": "test_add()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 7,
+          "line_end": 10
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_divide_by_zero",
+          "signature": "test_divide_by_zero()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 15
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "fastapi.testclient.TestClient",
+          "type": "from_import",
+          "category": "external"
+        },
+        {
+          "name": "app.main.app",
+          "type": "from_import",
+          "category": "internal"
+        }
+      ]
+    }
+  ],
+  "traceability": [
+    {
+      "tenant_id": "TENANT-004",
+      "project_id": "PROJ-004",
+      "requirement_ids": [
+        "REQ-004"
+      ],
+      "story_id": "STORY-004",
+      "task_id": "TASK-004",
+      "task_run_id": "RUN-004",
+      "git": {
+        "branch": "main",
+        "commit_sha": "c6bf267f583c806f04457c48dd387f0f63f53df9"
+      },
+      "mapped_at": "2026-10-05T18:34:09+05:30",
+      "code_reference": null,
+      "unresolved_code_reference": {
+        "file": "sample_service.py",
+        "class_name": "UserService",
+        "symbol": "create_user"
+      }
+    }
+  ]
+}

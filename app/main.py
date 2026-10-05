@@ -51,3 +51,50 @@ def square(req: CalculationRequest):
         "a": req.a,
         "result": req.a ** 2
     }
+
+# =========================================================
+# Manifest-driven utility endpoints
+# =========================================================
+
+@app.post("/square")
+def square(req: CalculationRequest):
+    return {
+        "operation": "square",
+        "a": req.a,
+        "result": req.a ** 2
+    }
+
+@app.post("/cube")
+def cube(req: CalculationRequest):
+    return {
+        "operation": "cube",
+        "a": req.a,
+        "result": req.a ** 3
+    }
+
+@app.post("/average")
+def average(req: CalculationRequest):
+    return {
+        "operation": "average",
+        "a": req.a,
+        "b": req.b,
+        "result": (req.a + req.b) / 2
+    }
+
+@app.post("/maximum")
+def maximum(req: CalculationRequest):
+    return {
+        "operation": "maximum",
+        "a": req.a,
+        "b": req.b,
+        "result": max(req.a, req.b)
+    }
+
+@app.post("/minimum")
+def minimum(req: CalculationRequest):
+    return {
+        "operation": "minimum",
+        "a": req.a,
+        "b": req.b,
+        "result": min(req.a, req.b)
+    }

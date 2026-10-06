@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-06T07:42:32.484699+00:00",
+  "generated_at": "2026-10-06T07:58:45.376811+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "b952d1a4c2c9c22422269ad0d77affa38378a20e"
+    "commit_sha": "e3393e32f0d5a8d8e181d555cca9a7d9855c51b7"
   },
   "files": [
     {
@@ -16,7 +16,7 @@
       "language": "Python",
       "size": 0,
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "last_modified": "2026-10-06T07:42:28.406295+00:00",
+      "last_modified": "2026-10-06T07:58:40.781110+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -30,7 +30,7 @@
       "language": "Python",
       "size": 4412,
       "hash": "83c2963002278eca968835ca900af3cf665afcf2ff9a472bffdd8218936ba4d4",
-      "last_modified": "2026-10-06T07:42:28.607968+00:00",
+      "last_modified": "2026-10-06T07:58:40.782110+00:00",
       "classes": [
         {
           "name": "CalculationRequest",
@@ -511,9 +511,9 @@
       "extension": ".json",
       "type": "source",
       "language": "JSON",
-      "size": 11188,
-      "hash": "24d9ab7febb6655d4cd81a0c9aa23bcdccced57496d6ab44c69e48ced7ef5cf8",
-      "last_modified": "2026-10-06T07:42:28.409958+00:00",
+      "size": 17554,
+      "hash": "c8e13dbbe394501c1b96e6cd3837bf8dcb4d0b8be32b60dbbb50862229eac29a",
+      "last_modified": "2026-10-06T07:58:40.785128+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -527,7 +527,7 @@
       "language": "Python",
       "size": 1326,
       "hash": "fbaf5b1e9e91df6299576443b8b4d1fd579ab037e43160545e65c6ddaae13fa9",
-      "last_modified": "2026-10-06T07:42:28.609931+00:00",
+      "last_modified": "2026-10-06T07:58:40.787109+00:00",
       "classes": [],
       "functions": [
         {
@@ -655,5 +655,27 @@
       ]
     }
   ],
-  "traceability": []
+  "traceability": [
+    {
+      "tenant_id": "TENANT-004",
+      "project_id": "PROJ-004",
+      "requirement_ids": [
+        "REQ-004"
+      ],
+      "story_id": "STORY-004",
+      "task_id": "TASK-004",
+      "task_run_id": "RUN-004",
+      "git": {
+        "branch": "main",
+        "commit_sha": "e3393e32f0d5a8d8e181d555cca9a7d9855c51b7"
+      },
+      "mapped_at": "2026-10-06T13:28:44+05:30",
+      "code_reference": null,
+      "unresolved_code_reference": {
+        "file": "sample_service.py",
+        "class_name": "UserService",
+        "symbol": "create_user"
+      }
+    }
+  ]
 }

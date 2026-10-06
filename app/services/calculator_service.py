@@ -42,3 +42,13 @@ class CalculatorService:
     @staticmethod
     def percentage(value: float, percentage: float) -> float:
         return value * (percentage / 100)
+
+    @staticmethod
+    def midpoint(a: float, b: float) -> float:
+        return (a + b) / 2
+
+    @staticmethod
+    def ratio(a: float, b: float) -> float:
+        if b == 0:
+            raise ValueError("Ratio denominator cannot be zero")
+        return a / b

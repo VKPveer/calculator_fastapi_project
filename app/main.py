@@ -1,20 +1,23 @@
 from fastapi import FastAPI, HTTPException
 
+from app.config import CONFIG
 from app.models import (
     CalculationRequest,
     ClampRequest,
+    CompoundInterestRequest,
+    NormalizeRequest,
     PercentageChangeRequest,
     PercentageRequest,
     ValuesRequest,
+    WeightedAverageRequest,
 )
-from app.services.calculator_service import CalculatorService
-from app.services.statistics_service import StatisticsService
-from app.utils import clamp, percentage_change
+from app.services import CalculatorService, FinanceService, StatisticsService
+from app.utils import clamp, normalize, percentage_change, round_result
 
 app = FastAPI(
-    title="Calculator API",
-    version="1.1.0",
-    description="Calculator API with reusable service-layer business logic."
+    title=CONFIG.name,
+    version=CONFIG.version,
+    description=CONFIG.description,
 )
 
 
@@ -22,7 +25,7 @@ app = FastAPI(
 def root():
     return {
         "message": "Calculator FastAPI is running",
-        "version": "1.1.0"
+        "version": CONFIG.version,
     }
 
 
@@ -31,7 +34,13 @@ def health_details():
     return {
         "status": "healthy",
         "service": "calculator_fastapi_project",
-        "version": "1.1.0"
+        "version": CONFIG.version,
+        "capabilities": [
+            "calculator",
+            "statistics",
+            "finance",
+            "utilities",
+        ],
     }
 
 
@@ -41,7 +50,7 @@ def add(req: CalculationRequest):
         "operation": "add",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.add(req.a, req.b)
+        "result": CalculatorService.add(req.a, req.b),
     }
 
 
@@ -51,7 +60,7 @@ def subtract(req: CalculationRequest):
         "operation": "subtract",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.subtract(req.a, req.b)
+        "result": CalculatorService.subtract(req.a, req.b),
     }
 
 
@@ -61,7 +70,7 @@ def multiply(req: CalculationRequest):
         "operation": "multiply",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.multiply(req.a, req.b)
+        "result": CalculatorService.multiply(req.a, req.b),
     }
 
 
@@ -70,16 +79,13 @@ def divide(req: CalculationRequest):
     try:
         result = CalculatorService.divide(req.a, req.b)
     except ValueError as error:
-        raise HTTPException(
-            status_code=400,
-            detail=str(error)
-        ) from error
+        raise HTTPException(status_code=400, detail=str(error)) from error
 
     return {
         "operation": "divide",
         "a": req.a,
         "b": req.b,
-        "result": result
+        "result": result,
     }
 
 
@@ -89,7 +95,7 @@ def power(req: CalculationRequest):
         "operation": "power",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.power(req.a, req.b)
+        "result": CalculatorService.power(req.a, req.b),
     }
 
 
@@ -98,7 +104,7 @@ def square(req: CalculationRequest):
     return {
         "operation": "square",
         "a": req.a,
-        "result": CalculatorService.square(req.a)
+        "result": CalculatorService.square(req.a),
     }
 
 
@@ -108,7 +114,7 @@ def average(req: CalculationRequest):
         "operation": "average",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.average(req.a, req.b)
+        "result": CalculatorService.average(req.a, req.b),
     }
 
 
@@ -118,7 +124,7 @@ def absolute_difference(req: CalculationRequest):
         "operation": "absolute_difference",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.absolute_difference(req.a, req.b)
+        "result": CalculatorService.absolute_difference(req.a, req.b),
     }
 
 
@@ -128,7 +134,7 @@ def sum_of_squares(req: CalculationRequest):
         "operation": "sum_of_squares",
         "a": req.a,
         "b": req.b,
-        "result": CalculatorService.sum_of_squares(req.a, req.b)
+        "result": CalculatorService.sum_of_squares(req.a, req.b),
     }
 
 
@@ -140,9 +146,10 @@ def percentage(req: PercentageRequest):
         "percentage": req.percentage,
         "result": CalculatorService.percentage(
             req.value,
-            req.percentage
-        )
+            req.percentage,
+        ),
     }
+
 
 @app.post("/clamp")
 def clamp_value(req: ClampRequest):
@@ -150,12 +157,13 @@ def clamp_value(req: ClampRequest):
         result = clamp(req.value, req.minimum, req.maximum)
     except ValueError as error:
         raise HTTPException(status_code=400, detail=str(error)) from error
+
     return {
         "operation": "clamp",
         "value": req.value,
         "minimum": req.minimum,
         "maximum": req.maximum,
-        "result": result
+        "result": result,
     }
 
 
@@ -165,36 +173,104 @@ def calculate_percentage_change(req: PercentageChangeRequest):
         result = percentage_change(req.old_value, req.new_value)
     except ValueError as error:
         raise HTTPException(status_code=400, detail=str(error)) from error
+
     return {
         "operation": "percentage_change",
         "old_value": req.old_value,
         "new_value": req.new_value,
-        "result": result
+        "result": round_result(result),
     }
 
 
 @app.post("/mean")
 def mean(req: ValuesRequest):
-    try:
-        result = StatisticsService.mean(req.values)
-    except ValueError as error:
-        raise HTTPException(status_code=400, detail=str(error)) from error
     return {
         "operation": "mean",
         "values": req.values,
-        "result": result
+        "result": round_result(StatisticsService.mean(req.values)),
     }
 
 
 @app.post("/range")
 def range_value(req: ValuesRequest):
-    try:
-        result = StatisticsService.range_value(req.values)
-    except ValueError as error:
-        raise HTTPException(status_code=400, detail=str(error)) from error
     return {
         "operation": "range",
         "values": req.values,
-        "result": result
+        "result": StatisticsService.range_value(req.values),
     }
 
+
+@app.post("/median")
+def median_value(req: ValuesRequest):
+    return {
+        "operation": "median",
+        "values": req.values,
+        "result": StatisticsService.median_value(req.values),
+    }
+
+
+@app.post("/weighted-average")
+def weighted_average(req: WeightedAverageRequest):
+    try:
+        result = StatisticsService.weighted_average(
+            req.values,
+            req.weights,
+        )
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "operation": "weighted_average",
+        "values": req.values,
+        "weights": req.weights,
+        "result": round_result(result),
+    }
+
+
+@app.post("/normalize")
+def normalize_value(req: NormalizeRequest):
+    try:
+        result = normalize(req.value, req.minimum, req.maximum)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "operation": "normalize",
+        "value": req.value,
+        "minimum": req.minimum,
+        "maximum": req.maximum,
+        "result": round_result(result),
+    }
+
+
+@app.post("/ratio")
+def ratio(req: CalculationRequest):
+    try:
+        result = CalculatorService.ratio(req.a, req.b)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "operation": "ratio",
+        "a": req.a,
+        "b": req.b,
+        "result": round_result(result),
+    }
+
+
+@app.post("/compound-amount")
+def compound_amount(req: CompoundInterestRequest):
+    result = FinanceService.compound_amount(
+        req.principal,
+        req.annual_rate_percent,
+        req.years,
+        req.compounds_per_year,
+    )
+    return {
+        "operation": "compound_amount",
+        "principal": req.principal,
+        "annual_rate_percent": req.annual_rate_percent,
+        "years": req.years,
+        "compounds_per_year": req.compounds_per_year,
+        "result": round_result(result, 2),
+    }

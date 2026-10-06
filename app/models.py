@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class CalculationRequest(BaseModel):
@@ -14,6 +14,7 @@ class PercentageRequest(BaseModel):
     value: float
     percentage: float
 
+
 class ClampRequest(BaseModel):
     value: float
     minimum: float
@@ -26,5 +27,22 @@ class PercentageChangeRequest(BaseModel):
 
 
 class ValuesRequest(BaseModel):
-    values: list[float]
+    values: list[float] = Field(min_length=1)
 
+
+class WeightedAverageRequest(BaseModel):
+    values: list[float] = Field(min_length=1)
+    weights: list[float] = Field(min_length=1)
+
+
+class CompoundInterestRequest(BaseModel):
+    principal: float = Field(ge=0)
+    annual_rate_percent: float
+    years: float = Field(ge=0)
+    compounds_per_year: int = Field(default=1, ge=1)
+
+
+class NormalizeRequest(BaseModel):
+    value: float
+    minimum: float
+    maximum: float

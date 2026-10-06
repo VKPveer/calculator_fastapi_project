@@ -1,12 +1,22 @@
+# Python
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
 venv/
+
+# Environment / IDE
 .env
 .vscode/
 .idea/
+
+# Coverage / build artifacts
 .coverage
 htmlcov/
 coverage.xml
+build/
+dist/
 
+# OS files
+.DS_Store
+Thumbs.db

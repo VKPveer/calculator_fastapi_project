@@ -1,54 +1,58 @@
-# CoZo Test Verification Map
+# CoZo V3 Test Verification Map
 
-After generating a manifest from this source folder, verify that it contains:
+After `/generate-manifest`, verify the manifest contains all of these.
 
-1. `app/main.py`
-   - functions: `root`, `health_details`, `add`, `subtract`, `multiply`,
-     `divide`, `power`, `square`, `average`, `absolute_difference`,
-     `sum_of_squares`, `percentage`
+## New files
 
-2. `app/models.py`
-   - classes: `CalculationRequest`, `SingleNumberRequest`, `PercentageRequest`
+- `app/config.py`
+- `app/services/finance_service.py`
+- `tests/test_services.py`
+- `docs/ARCHITECTURE.md`
 
-3. `app/services/calculator_service.py`
-   - class: `CalculatorService`
-   - methods: `add`, `subtract`, `multiply`, `divide`, `power`, `square`,
-     `average`, `absolute_difference`, `sum_of_squares`, `percentage`
+## Updated source symbols
 
-4. `tests/test_main.py`
-   - 9 test functions
+### app/config.py
+- `AppConfig`
+- `CONFIG`
 
-5. Internal dependencies
-   - `app.main` -> `app.models`
-   - `app.main` -> `app.services.calculator_service`
+### app/models.py
+- `CalculationRequest`
+- `ClampRequest`
+- `PercentageChangeRequest`
+- `PercentageRequest`
+- `ValuesRequest`
+- `WeightedAverageRequest`
+- `CompoundInterestRequest`
+- `NormalizeRequest`
 
-6. Documentation/support changes
-   - `README.md`
-   - `CHANGELOG.md`
-   - `.gitignore`
+### app/services/calculator_service.py
+- `CalculatorService.midpoint`
+- `CalculatorService.ratio`
 
-## Version 1.2.0 verification
+### app/services/statistics_service.py
+- `StatisticsService.median_value`
+- `StatisticsService.weighted_average`
 
-Verify the generated manifest also contains:
+### app/services/finance_service.py
+- `FinanceService.simple_interest`
+- `FinanceService.compound_amount`
 
-- `app/utils.py`
-  - `clamp`
-  - `percentage_change`
-- `app/services/statistics_service.py`
-  - class `StatisticsService`
-  - methods `mean`, `range_value`
-- `app/models.py`
-  - `ClampRequest`
-  - `PercentageChangeRequest`
-  - `ValuesRequest`
-- `app/main.py`
-  - `clamp_value`
-  - `calculate_percentage_change`
-  - `mean`
-  - `range_value`
-- `tests/test_main.py`
-  - `test_clamp`
-  - `test_percentage_change`
-  - `test_mean`
-  - `test_range`
+### app/utils.py
+- `normalize`
+- `round_result`
 
+### app/main.py
+- `median_value`
+- `weighted_average`
+- `normalize_value`
+- `ratio`
+- `compound_amount`
+
+## New tests
+
+`tests/test_services.py` should contain service-level tests.
+
+## GitHub verification after client sync
+
+The GitHub commit should show changes to every tracked source/support file plus
+the newly generated `project-manifest.json`.

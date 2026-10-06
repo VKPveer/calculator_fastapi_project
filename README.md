@@ -1,77 +1,60 @@
 # Calculator FastAPI Project
 
-A small FastAPI calculator application used to test CoZo project-manifest
-generation, code-structure discovery, dependency mapping, traceability,
-manifest-driven changes, validation, and GitHub update flows.
+A FastAPI calculator project designed for CoZo manifest-generation,
+source synchronization, traceability, validation, and GitHub push testing.
 
 ## Version
 
-Current test version: **1.1.0**
+Current test version: **1.3.0**
 
-## Project structure
+## V3 purpose
+
+V3 intentionally changes every tracked source/support file and adds new files so
+you can verify the full flow:
+
+```text
+local source
+→ /generate-manifest
+→ /client/prepare-and-push-project
+→ GitHub
+```
+
+## V3 project structure
 
 ```text
 app/
 ├── __init__.py
+├── config.py
 ├── main.py
 ├── models.py
+├── utils.py
 └── services/
     ├── __init__.py
-    └── calculator_service.py
+    ├── calculator_service.py
+    ├── finance_service.py
+    └── statistics_service.py
+
+docs/
+└── ARCHITECTURE.md
 
 tests/
-└── test_main.py
+├── test_main.py
+└── test_services.py
 ```
 
-## API endpoints
+## New V3 endpoints
 
-- `GET /`
-- `GET /health/details`
-- `POST /add`
-- `POST /subtract`
-- `POST /multiply`
-- `POST /divide`
-- `POST /power`
-- `POST /square`
-- `POST /average`
-- `POST /absolute-difference`
-- `POST /sum-of-squares`
-- `POST /percentage`
+- `POST /median`
+- `POST /weighted-average`
+- `POST /normalize`
+- `POST /ratio`
+- `POST /compound-amount`
 
-## Example percentage request
+Existing endpoints remain available.
 
-```json
-{
-  "value": 250,
-  "percentage": 12
-}
-```
+## Generate manifest
 
-Expected result:
-
-```json
-{
-  "operation": "percentage",
-  "value": 250,
-  "percentage": 12,
-  "result": 30
-}
-```
-
-## Run locally
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-Swagger UI:
-
-```text
-http://127.0.0.1:8000/docs
-```
+Use the local V3 folder with `/generate-manifest`.
 
 ## Run tests
 
@@ -79,38 +62,7 @@ http://127.0.0.1:8000/docs
 python -m pytest tests
 ```
 
-## CoZo manifest test purpose
+## Verification
 
-This version intentionally contains:
-
-- multiple Python source files,
-- Pydantic request models,
-- a reusable service class,
-- static methods,
-- internal module imports,
-- FastAPI endpoints,
-- test functions,
-- nested folders.
-
-That makes it useful for verifying that the generated `project-manifest.json`
-correctly captures files, classes, functions, methods, symbols, dependencies,
-Git metadata, and traceability.
-
-## Version 1.2.0 test additions
-
-New endpoints for CoZo manifest verification:
-
-- `POST /clamp`
-- `POST /percentage-change`
-- `POST /mean`
-- `POST /range`
-
-New source files:
-
-- `app/utils.py`
-- `app/services/statistics_service.py`
-
-These additions are intentionally spread across models, utility functions, services,
-API routes, and tests so the generated manifest can demonstrate file discovery,
-symbols, internal dependencies, and test coverage.
-
+See `COZO_TEST_VERIFICATION.md` for the exact files, classes, methods, and
+endpoints that should appear in the generated manifest and later on GitHub.

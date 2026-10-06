@@ -174,3 +174,6 @@ def smaller_number(req: CalculationRequest):
         "b": req.b,
         "result": min(req.a, req.b)
     }
+
+# MANIFEST_ALL_FILES_TEST: app/main.py updated by project-manifest.json
+MANIFEST_ALL_FILES_TEST = "app-main-updated"

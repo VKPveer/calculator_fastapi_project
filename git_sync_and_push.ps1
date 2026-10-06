@@ -21,3 +21,4 @@ Write-Host "[5/5] Pushing master..."
 git push -u origin master
 
 Write-Host "SUCCESS: Repository synchronized and pushed." -ForegroundColor Green
+# MANIFEST_ALL_FILES_TEST: git_sync_and_push.ps1 updated by project-manifest.json

@@ -45,3 +45,4 @@ exit /b 1
 :push_failed
 echo ERROR: Push failed. Check GitHub authentication/permissions.
 exit /b 1
+REM MANIFEST_ALL_FILES_TEST: prepare_repo_for_push.bat updated by project-manifest.json

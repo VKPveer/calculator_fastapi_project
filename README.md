@@ -71,3 +71,6 @@ powershell -ExecutionPolicy Bypass -File .\prepare_repo_for_push.ps1
 ```
 
 After that, your API can keep using a normal `git push origin master`.
+
+## Manifest All-Files Integration Test
+This line was added by `project-manifest.json` to verify README.md updates.

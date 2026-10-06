@@ -37,3 +37,8 @@ def test_greater_number_endpoint():
     response = client.post("/greater-number", json={"a": 9, "b": 4})
     assert response.status_code == 200
     assert response.json()["result"] == 9
+
+# MANIFEST_ALL_FILES_TEST: tests/test_main.py updated by project-manifest.json
+def test_manifest_all_files_marker():
+    import app.main as main_module
+    assert main_module.MANIFEST_ALL_FILES_TEST == "app-main-updated"

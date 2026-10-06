@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-06T12:19:44.266992+00:00",
+  "generated_at": "2026-10-06T14:20:49.417608+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "357f7cf6c5ec4e8bbae53a28504f2a0fc82675e0"
+    "commit_sha": "051fbae104acc80e6864739bfa062638955397bc"
   },
   "files": [
     {
@@ -1471,9 +1471,9 @@
       "extension": ".json",
       "type": "source",
       "language": "JSON",
-      "size": 35012,
-      "hash": "f55c9b90aa0f3dae29f9f24d5c46cd951023cf7db7fb04f269579af66e3bfb43",
-      "last_modified": "2026-10-06T12:19:39.936753+00:00",
+      "size": 51962,
+      "hash": "9d045e2125eae39d03780af31eddb55fc61c154b08cace844796cefe8d033410",
+      "last_modified": "2026-10-06T14:20:44.926253+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -1867,9 +1867,9 @@
       "task_run_id": "RUN-004",
       "git": {
         "branch": "main",
-        "commit_sha": "357f7cf6c5ec4e8bbae53a28504f2a0fc82675e0"
+        "commit_sha": "051fbae104acc80e6864739bfa062638955397bc"
       },
-      "mapped_at": "2026-10-06T17:49:43+05:30",
+      "mapped_at": "2026-10-06T19:50:48+05:30",
       "code_reference": null,
       "unresolved_code_reference": {
         "file": "sample_service.py",

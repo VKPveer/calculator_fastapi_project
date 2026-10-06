@@ -98,3 +98,79 @@ def minimum(req: CalculationRequest):
         "b": req.b,
         "result": min(req.a, req.b)
     }
+
+# =========================================================
+# Manifest-driven advanced calculator endpoints
+# =========================================================
+
+@app.post("/sum-of-squares")
+def sum_of_squares(req: CalculationRequest):
+    return {
+        "operation": "sum_of_squares",
+        "a": req.a,
+        "b": req.b,
+        "result": (req.a ** 2) + (req.b ** 2)
+    }
+
+@app.post("/difference-of-squares")
+def difference_of_squares(req: CalculationRequest):
+    return {
+        "operation": "difference_of_squares",
+        "a": req.a,
+        "b": req.b,
+        "result": (req.a ** 2) - (req.b ** 2)
+    }
+
+@app.post("/sum-then-double")
+def sum_then_double(req: CalculationRequest):
+    return {
+        "operation": "sum_then_double",
+        "a": req.a,
+        "b": req.b,
+        "result": (req.a + req.b) * 2
+    }
+
+@app.post("/product-plus-sum")
+def product_plus_sum(req: CalculationRequest):
+    return {
+        "operation": "product_plus_sum",
+        "a": req.a,
+        "b": req.b,
+        "result": (req.a * req.b) + req.a + req.b
+    }
+
+@app.post("/absolute-difference")
+def absolute_difference(req: CalculationRequest):
+    return {
+        "operation": "absolute_difference",
+        "a": req.a,
+        "b": req.b,
+        "result": abs(req.a - req.b)
+    }
+
+@app.post("/is-equal")
+def is_equal(req: CalculationRequest):
+    return {
+        "operation": "is_equal",
+        "a": req.a,
+        "b": req.b,
+        "result": req.a == req.b
+    }
+
+@app.post("/greater-number")
+def greater_number(req: CalculationRequest):
+    return {
+        "operation": "greater_number",
+        "a": req.a,
+        "b": req.b,
+        "result": max(req.a, req.b)
+    }
+
+@app.post("/smaller-number")
+def smaller_number(req: CalculationRequest):
+    return {
+        "operation": "smaller_number",
+        "a": req.a,
+        "b": req.b,
+        "result": min(req.a, req.b)
+    }

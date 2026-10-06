@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-05T15:12:31.259579+00:00",
+  "generated_at": "2026-10-06T07:42:32.484699+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "0f58a764559c0a3021cab01eb19b2e43d2743a8c"
+    "commit_sha": "b952d1a4c2c9c22422269ad0d77affa38378a20e"
   },
   "files": [
     {
@@ -16,7 +16,7 @@
       "language": "Python",
       "size": 0,
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "last_modified": "2026-10-05T15:12:23.547481+00:00",
+      "last_modified": "2026-10-06T07:42:28.406295+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -28,9 +28,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 2434,
-      "hash": "aee62119a35d33917a4147b3d2c8a332699d8eb13881e779d281cb261ac91d53",
-      "last_modified": "2026-10-05T15:12:23.945063+00:00",
+      "size": 4412,
+      "hash": "83c2963002278eca968835ca900af3cf665afcf2ff9a472bffdd8218936ba4d4",
+      "last_modified": "2026-10-06T07:42:28.607968+00:00",
       "classes": [
         {
           "name": "CalculationRequest",
@@ -157,6 +157,86 @@
           "async": false,
           "line_start": 94,
           "line_end": 100
+        },
+        {
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 107,
+          "line_end": 113
+        },
+        {
+          "name": "difference_of_squares",
+          "signature": "difference_of_squares(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 116,
+          "line_end": 122
+        },
+        {
+          "name": "sum_then_double",
+          "signature": "sum_then_double(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 125,
+          "line_end": 131
+        },
+        {
+          "name": "product_plus_sum",
+          "signature": "product_plus_sum(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 134,
+          "line_end": 140
+        },
+        {
+          "name": "absolute_difference",
+          "signature": "absolute_difference(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 143,
+          "line_end": 149
+        },
+        {
+          "name": "is_equal",
+          "signature": "is_equal(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 152,
+          "line_end": 158
+        },
+        {
+          "name": "greater_number",
+          "signature": "greater_number(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 161,
+          "line_end": 167
+        },
+        {
+          "name": "smaller_number",
+          "signature": "smaller_number(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 170,
+          "line_end": 176
         }
       ],
       "symbols": [
@@ -309,6 +389,102 @@
           "language": "Python",
           "line_start": 94,
           "line_end": 100
+        },
+        {
+          "symbol_type": "function",
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 107,
+          "line_end": 113
+        },
+        {
+          "symbol_type": "function",
+          "name": "difference_of_squares",
+          "signature": "difference_of_squares(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 116,
+          "line_end": 122
+        },
+        {
+          "symbol_type": "function",
+          "name": "sum_then_double",
+          "signature": "sum_then_double(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 125,
+          "line_end": 131
+        },
+        {
+          "symbol_type": "function",
+          "name": "product_plus_sum",
+          "signature": "product_plus_sum(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 134,
+          "line_end": 140
+        },
+        {
+          "symbol_type": "function",
+          "name": "absolute_difference",
+          "signature": "absolute_difference(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 143,
+          "line_end": 149
+        },
+        {
+          "symbol_type": "function",
+          "name": "is_equal",
+          "signature": "is_equal(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 152,
+          "line_end": 158
+        },
+        {
+          "symbol_type": "function",
+          "name": "greater_number",
+          "signature": "greater_number(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 161,
+          "line_end": 167
+        },
+        {
+          "symbol_type": "function",
+          "name": "smaller_number",
+          "signature": "smaller_number(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 170,
+          "line_end": 176
         }
       ],
       "dependencies": [
@@ -335,9 +511,9 @@
       "extension": ".json",
       "type": "source",
       "language": "JSON",
-      "size": 8462,
-      "hash": "406a5ca640be8b881943470f51f8edb8a6ea7cbc77903c6fddd21a65dbdb58f2",
-      "last_modified": "2026-10-05T15:12:23.552038+00:00",
+      "size": 11188,
+      "hash": "24d9ab7febb6655d4cd81a0c9aa23bcdccced57496d6ab44c69e48ced7ef5cf8",
+      "last_modified": "2026-10-06T07:42:28.409958+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -349,9 +525,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 395,
-      "hash": "47290b043cad5fd0d309594d2aab5c75b78605c724eb24af0ea383d1e0c3073b",
-      "last_modified": "2026-10-05T15:12:23.554037+00:00",
+      "size": 1326,
+      "hash": "fbaf5b1e9e91df6299576443b8b4d1fd579ab037e43160545e65c6ddaae13fa9",
+      "last_modified": "2026-10-06T07:42:28.609931+00:00",
       "classes": [],
       "functions": [
         {
@@ -369,6 +545,38 @@
           "async": false,
           "line_start": 13,
           "line_end": 15
+        },
+        {
+          "name": "test_sum_of_squares_endpoint",
+          "signature": "test_sum_of_squares_endpoint()",
+          "parameters": [],
+          "async": false,
+          "line_start": 21,
+          "line_end": 24
+        },
+        {
+          "name": "test_absolute_difference_endpoint",
+          "signature": "test_absolute_difference_endpoint()",
+          "parameters": [],
+          "async": false,
+          "line_start": 26,
+          "line_end": 29
+        },
+        {
+          "name": "test_is_equal_endpoint",
+          "signature": "test_is_equal_endpoint()",
+          "parameters": [],
+          "async": false,
+          "line_start": 31,
+          "line_end": 34
+        },
+        {
+          "name": "test_greater_number_endpoint",
+          "signature": "test_greater_number_endpoint()",
+          "parameters": [],
+          "async": false,
+          "line_start": 36,
+          "line_end": 39
         }
       ],
       "symbols": [
@@ -391,6 +599,46 @@
           "language": "Python",
           "line_start": 13,
           "line_end": 15
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_sum_of_squares_endpoint",
+          "signature": "test_sum_of_squares_endpoint()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 21,
+          "line_end": 24
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_absolute_difference_endpoint",
+          "signature": "test_absolute_difference_endpoint()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 26,
+          "line_end": 29
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_is_equal_endpoint",
+          "signature": "test_is_equal_endpoint()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 31,
+          "line_end": 34
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_greater_number_endpoint",
+          "signature": "test_greater_number_endpoint()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 36,
+          "line_end": 39
         }
       ],
       "dependencies": [
@@ -407,27 +655,5 @@
       ]
     }
   ],
-  "traceability": [
-    {
-      "tenant_id": "TENANT-004",
-      "project_id": "PROJ-004",
-      "requirement_ids": [
-        "REQ-004"
-      ],
-      "story_id": "STORY-004",
-      "task_id": "TASK-004",
-      "task_run_id": "RUN-004",
-      "git": {
-        "branch": "main",
-        "commit_sha": "0f58a764559c0a3021cab01eb19b2e43d2743a8c"
-      },
-      "mapped_at": "2026-10-05T20:42:30+05:30",
-      "code_reference": null,
-      "unresolved_code_reference": {
-        "file": "sample_service.py",
-        "class_name": "UserService",
-        "symbol": "create_user"
-      }
-    }
-  ]
+  "traceability": []
 }

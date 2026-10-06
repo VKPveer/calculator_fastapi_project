@@ -1,20 +1,60 @@
 # Calculator FastAPI Project
 
-Simple calculator API built with FastAPI.
+A small FastAPI calculator application used to test CoZo project-manifest
+generation, code-structure discovery, dependency mapping, traceability,
+manifest-driven changes, validation, and GitHub update flows.
 
-## Endpoints
+## Version
+
+Current test version: **1.1.0**
+
+## Project structure
+
+```text
+app/
+├── __init__.py
+├── main.py
+├── models.py
+└── services/
+    ├── __init__.py
+    └── calculator_service.py
+
+tests/
+└── test_main.py
+```
+
+## API endpoints
+
 - `GET /`
+- `GET /health/details`
 - `POST /add`
 - `POST /subtract`
 - `POST /multiply`
 - `POST /divide`
+- `POST /power`
+- `POST /square`
+- `POST /average`
+- `POST /absolute-difference`
+- `POST /sum-of-squares`
+- `POST /percentage`
 
-Request body example:
+## Example percentage request
 
 ```json
 {
-  "a": 10,
-  "b": 5
+  "value": 250,
+  "percentage": 12
+}
+```
+
+Expected result:
+
+```json
+{
+  "operation": "percentage",
+  "value": 250,
+  "percentage": 12,
+  "result": 30
 }
 ```
 
@@ -22,55 +62,55 @@ Request body example:
 
 ```bash
 python -m venv .venv
-# Windows
-.venv\\Scripts\\activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Open Swagger UI at `http://127.0.0.1:8000/docs`.
+Swagger UI:
 
-## Tests
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Run tests
 
 ```bash
-pytest
+python -m pytest tests
 ```
 
-## GitHub push note
-This repository is configured with:
+## CoZo manifest test purpose
 
-`origin = https://github.com/VKPveer/calculator_fastapi_project.git`
+This version intentionally contains:
 
-If GitHub already contains an initial commit, a direct `git push origin master` can be rejected as a non-fast-forward update. Run one of the included sync scripts first:
+- multiple Python source files,
+- Pydantic request models,
+- a reusable service class,
+- static methods,
+- internal module imports,
+- FastAPI endpoints,
+- test functions,
+- nested folders.
 
-Windows CMD:
-`git_sync_and_push.bat`
+That makes it useful for verifying that the generated `project-manifest.json`
+correctly captures files, classes, functions, methods, symbols, dependencies,
+Git metadata, and traceability.
 
-PowerShell:
-`powershell -ExecutionPolicy Bypass -File .\git_sync_and_push.ps1`
+## Version 1.2.0 test additions
 
-The script fetches the existing remote `master`, merges it safely (including unrelated initial histories), and then pushes the project.
+New endpoints for CoZo manifest verification:
 
-## Automatic non-fast-forward fix
+- `POST /clamp`
+- `POST /percentage-change`
+- `POST /mean`
+- `POST /range`
 
-This package includes a Git `post-commit` hook at `.git/hooks/post-commit`.
-When an external API commits changes and then runs `git push origin master`, the hook first fetches `origin/master`, incorporates remote history (including a GitHub-created initial README commit), and pushes the synchronized history. The API's following normal push should therefore succeed instead of returning a non-fast-forward / fetch-first error.
+New source files:
 
-### One-time manual preparation (recommended after extracting)
+- `app/utils.py`
+- `app/services/statistics_service.py`
 
-Run either:
+These additions are intentionally spread across models, utility functions, services,
+API routes, and tests so the generated manifest can demonstrate file discovery,
+symbols, internal dependencies, and test coverage.
 
-```bat
-prepare_repo_for_push.bat
-```
-
-or:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\prepare_repo_for_push.ps1
-```
-
-After that, your API can keep using a normal `git push origin master`.
-
-## Manifest All-Files Integration Test
-This line was added by `project-manifest.json` to verify README.md updates.

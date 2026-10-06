@@ -25,4 +25,3 @@ Write-Host "Pushing synchronized master..."
 if ($LASTEXITCODE -ne 0) { throw "Push failed. Check GitHub authentication/permissions." }
 
 Write-Host "SUCCESS: Repository is synchronized. Normal API push should now work."
-# MANIFEST_ALL_FILES_TEST: prepare_repo_for_push.ps1 updated by project-manifest.json

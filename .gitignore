@@ -6,4 +6,7 @@ venv/
 .env
 .vscode/
 .idea/
-# MANIFEST_ALL_FILES_TEST: .gitignore verified by project-manifest.json
+.coverage
+htmlcov/
+coverage.xml
+

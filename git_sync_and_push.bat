@@ -35,4 +35,3 @@ exit /b 0
 echo.
 echo ERROR: Git sync/push failed. See message above.
 exit /b 1
-REM MANIFEST_ALL_FILES_TEST: git_sync_and_push.bat updated by project-manifest.json

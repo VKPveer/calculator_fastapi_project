@@ -1,39 +1,87 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 
-app = FastAPI(title="Calculator API", version="1.0.0")
+from app.models import (
+    CalculationRequest,
+    ClampRequest,
+    PercentageChangeRequest,
+    PercentageRequest,
+    ValuesRequest,
+)
+from app.services.calculator_service import CalculatorService
+from app.services.statistics_service import StatisticsService
+from app.utils import clamp, percentage_change
 
-
-class CalculationRequest(BaseModel):
-    a: float
-    b: float
+app = FastAPI(
+    title="Calculator API",
+    version="1.1.0",
+    description="Calculator API with reusable service-layer business logic."
+)
 
 
 @app.get("/")
 def root():
-    return {"message": "Calculator FastAPI is running"}
+    return {
+        "message": "Calculator FastAPI is running",
+        "version": "1.1.0"
+    }
+
+
+@app.get("/health/details")
+def health_details():
+    return {
+        "status": "healthy",
+        "service": "calculator_fastapi_project",
+        "version": "1.1.0"
+    }
 
 
 @app.post("/add")
 def add(req: CalculationRequest):
-    return {"operation": "add", "a": req.a, "b": req.b, "result": req.a + req.b}
+    return {
+        "operation": "add",
+        "a": req.a,
+        "b": req.b,
+        "result": CalculatorService.add(req.a, req.b)
+    }
 
 
 @app.post("/subtract")
 def subtract(req: CalculationRequest):
-    return {"operation": "subtract", "a": req.a, "b": req.b, "result": req.a - req.b}
+    return {
+        "operation": "subtract",
+        "a": req.a,
+        "b": req.b,
+        "result": CalculatorService.subtract(req.a, req.b)
+    }
 
 
 @app.post("/multiply")
 def multiply(req: CalculationRequest):
-    return {"operation": "multiply", "a": req.a, "b": req.b, "result": req.a * req.b}
+    return {
+        "operation": "multiply",
+        "a": req.a,
+        "b": req.b,
+        "result": CalculatorService.multiply(req.a, req.b)
+    }
 
 
 @app.post("/divide")
 def divide(req: CalculationRequest):
-    if req.b == 0:
-        raise HTTPException(status_code=400, detail="Division by zero is not allowed")
-    return {"operation": "divide", "a": req.a, "b": req.b, "result": req.a / req.b}
+    try:
+        result = CalculatorService.divide(req.a, req.b)
+    except ValueError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error)
+        ) from error
+
+    return {
+        "operation": "divide",
+        "a": req.a,
+        "b": req.b,
+        "result": result
+    }
+
 
 @app.post("/power")
 def power(req: CalculationRequest):
@@ -41,36 +89,18 @@ def power(req: CalculationRequest):
         "operation": "power",
         "a": req.a,
         "b": req.b,
-        "result": req.a ** req.b
+        "result": CalculatorService.power(req.a, req.b)
     }
+
 
 @app.post("/square")
 def square(req: CalculationRequest):
     return {
         "operation": "square",
         "a": req.a,
-        "result": req.a ** 2
+        "result": CalculatorService.square(req.a)
     }
 
-# =========================================================
-# Manifest-driven utility endpoints
-# =========================================================
-
-@app.post("/square")
-def square(req: CalculationRequest):
-    return {
-        "operation": "square",
-        "a": req.a,
-        "result": req.a ** 2
-    }
-
-@app.post("/cube")
-def cube(req: CalculationRequest):
-    return {
-        "operation": "cube",
-        "a": req.a,
-        "result": req.a ** 3
-    }
 
 @app.post("/average")
 def average(req: CalculationRequest):
@@ -78,66 +108,9 @@ def average(req: CalculationRequest):
         "operation": "average",
         "a": req.a,
         "b": req.b,
-        "result": (req.a + req.b) / 2
+        "result": CalculatorService.average(req.a, req.b)
     }
 
-@app.post("/maximum")
-def maximum(req: CalculationRequest):
-    return {
-        "operation": "maximum",
-        "a": req.a,
-        "b": req.b,
-        "result": max(req.a, req.b)
-    }
-
-@app.post("/minimum")
-def minimum(req: CalculationRequest):
-    return {
-        "operation": "minimum",
-        "a": req.a,
-        "b": req.b,
-        "result": min(req.a, req.b)
-    }
-
-# =========================================================
-# Manifest-driven advanced calculator endpoints
-# =========================================================
-
-@app.post("/sum-of-squares")
-def sum_of_squares(req: CalculationRequest):
-    return {
-        "operation": "sum_of_squares",
-        "a": req.a,
-        "b": req.b,
-        "result": (req.a ** 2) + (req.b ** 2)
-    }
-
-@app.post("/difference-of-squares")
-def difference_of_squares(req: CalculationRequest):
-    return {
-        "operation": "difference_of_squares",
-        "a": req.a,
-        "b": req.b,
-        "result": (req.a ** 2) - (req.b ** 2)
-    }
-
-@app.post("/sum-then-double")
-def sum_then_double(req: CalculationRequest):
-    return {
-        "operation": "sum_then_double",
-        "a": req.a,
-        "b": req.b,
-        "result": (req.a + req.b) * 2
-    }
-
-@app.post("/product-plus-sum")
-def product_plus_sum(req: CalculationRequest):
-    return {
-        "operation": "product_plus_sum",
-        "a": req.a,
-        "b": req.b,
-        "result": (req.a * req.b) + req.a + req.b
-    }
 
 @app.post("/absolute-difference")
 def absolute_difference(req: CalculationRequest):
@@ -145,35 +118,83 @@ def absolute_difference(req: CalculationRequest):
         "operation": "absolute_difference",
         "a": req.a,
         "b": req.b,
-        "result": abs(req.a - req.b)
+        "result": CalculatorService.absolute_difference(req.a, req.b)
     }
 
-@app.post("/is-equal")
-def is_equal(req: CalculationRequest):
+
+@app.post("/sum-of-squares")
+def sum_of_squares(req: CalculationRequest):
     return {
-        "operation": "is_equal",
+        "operation": "sum_of_squares",
         "a": req.a,
         "b": req.b,
-        "result": req.a == req.b
+        "result": CalculatorService.sum_of_squares(req.a, req.b)
     }
 
-@app.post("/greater-number")
-def greater_number(req: CalculationRequest):
+
+@app.post("/percentage")
+def percentage(req: PercentageRequest):
     return {
-        "operation": "greater_number",
-        "a": req.a,
-        "b": req.b,
-        "result": max(req.a, req.b)
+        "operation": "percentage",
+        "value": req.value,
+        "percentage": req.percentage,
+        "result": CalculatorService.percentage(
+            req.value,
+            req.percentage
+        )
     }
 
-@app.post("/smaller-number")
-def smaller_number(req: CalculationRequest):
+@app.post("/clamp")
+def clamp_value(req: ClampRequest):
+    try:
+        result = clamp(req.value, req.minimum, req.maximum)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
     return {
-        "operation": "smaller_number",
-        "a": req.a,
-        "b": req.b,
-        "result": min(req.a, req.b)
+        "operation": "clamp",
+        "value": req.value,
+        "minimum": req.minimum,
+        "maximum": req.maximum,
+        "result": result
     }
 
-# MANIFEST_ALL_FILES_TEST: app/main.py updated by project-manifest.json
-MANIFEST_ALL_FILES_TEST = "app-main-updated"
+
+@app.post("/percentage-change")
+def calculate_percentage_change(req: PercentageChangeRequest):
+    try:
+        result = percentage_change(req.old_value, req.new_value)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    return {
+        "operation": "percentage_change",
+        "old_value": req.old_value,
+        "new_value": req.new_value,
+        "result": result
+    }
+
+
+@app.post("/mean")
+def mean(req: ValuesRequest):
+    try:
+        result = StatisticsService.mean(req.values)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    return {
+        "operation": "mean",
+        "values": req.values,
+        "result": result
+    }
+
+
+@app.post("/range")
+def range_value(req: ValuesRequest):
+    try:
+        result = StatisticsService.range_value(req.values)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    return {
+        "operation": "range",
+        "values": req.values,
+        "result": result
+    }
+

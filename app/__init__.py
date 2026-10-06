@@ -1,3 +1,1 @@
-
-# MANIFEST_ALL_FILES_TEST: app/__init__.py updated by project-manifest.json
-MANIFEST_PACKAGE_TEST = True
+__version__ = "1.1.0"

@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-06T09:55:54.304408+00:00",
+  "generated_at": "2026-10-06T10:15:52.246186+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "110c09627905eda9e106d2c5f6120ad56d6ccd4c"
+    "commit_sha": "7598903b190fdaa03c1fa947bd00edbe7dc2d5d1"
   },
   "files": [
     {
@@ -14,9 +14,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 109,
-      "hash": "397600090a5b56fad4ef442afd174cba5f4dd284c328e152b8576b84d1cb8f42",
-      "last_modified": "2026-10-06T09:55:52.064921+00:00",
+      "size": 22,
+      "hash": "2c6550c83b1689f7400a8eeacedc1bf115961ddb3513bb90f99a83f12023cb0e",
+      "last_modified": "2026-10-06T04:16:00+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -28,25 +28,26 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 4533,
-      "hash": "fd9107180a28a16905231f7005d0d1631b9e7d83554609af38f15c21a074289a",
-      "last_modified": "2026-10-06T09:55:52.064921+00:00",
-      "classes": [
-        {
-          "name": "CalculationRequest",
-          "line_start": 7,
-          "line_end": 9,
-          "methods": []
-        }
-      ],
+      "size": 4691,
+      "hash": "c3def9efaa6d7106b6940c8a41419f357df6f87eeab747519a94d75d76829f5c",
+      "last_modified": "2026-10-06T04:16:00+00:00",
+      "classes": [],
       "functions": [
         {
           "name": "root",
           "signature": "root()",
           "parameters": [],
           "async": false,
-          "line_start": 13,
-          "line_end": 14
+          "line_start": 22,
+          "line_end": 26
+        },
+        {
+          "name": "health_details",
+          "signature": "health_details()",
+          "parameters": [],
+          "async": false,
+          "line_start": 30,
+          "line_end": 35
         },
         {
           "name": "add",
@@ -55,8 +56,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 18,
-          "line_end": 19
+          "line_start": 39,
+          "line_end": 45
         },
         {
           "name": "subtract",
@@ -65,8 +66,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 23,
-          "line_end": 24
+          "line_start": 49,
+          "line_end": 55
         },
         {
           "name": "multiply",
@@ -75,8 +76,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 28,
-          "line_end": 29
+          "line_start": 59,
+          "line_end": 65
         },
         {
           "name": "divide",
@@ -85,8 +86,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 33,
-          "line_end": 36
+          "line_start": 69,
+          "line_end": 83
         },
         {
           "name": "power",
@@ -95,8 +96,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 39,
-          "line_end": 45
+          "line_start": 87,
+          "line_end": 93
         },
         {
           "name": "square",
@@ -105,28 +106,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 48,
-          "line_end": 53
-        },
-        {
-          "name": "square",
-          "signature": "square(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 60,
-          "line_end": 65
-        },
-        {
-          "name": "cube",
-          "signature": "cube(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 68,
-          "line_end": 73
+          "line_start": 97,
+          "line_end": 102
         },
         {
           "name": "average",
@@ -135,68 +116,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 76,
-          "line_end": 82
-        },
-        {
-          "name": "maximum",
-          "signature": "maximum(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 85,
-          "line_end": 91
-        },
-        {
-          "name": "minimum",
-          "signature": "minimum(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 94,
-          "line_end": 100
-        },
-        {
-          "name": "sum_of_squares",
-          "signature": "sum_of_squares(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 107,
-          "line_end": 113
-        },
-        {
-          "name": "difference_of_squares",
-          "signature": "difference_of_squares(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 116,
-          "line_end": 122
-        },
-        {
-          "name": "sum_then_double",
-          "signature": "sum_then_double(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 125,
-          "line_end": 131
-        },
-        {
-          "name": "product_plus_sum",
-          "signature": "product_plus_sum(req)",
-          "parameters": [
-            "req"
-          ],
-          "async": false,
-          "line_start": 134,
-          "line_end": 140
+          "line_start": 106,
+          "line_end": 112
         },
         {
           "name": "absolute_difference",
@@ -205,49 +126,71 @@
             "req"
           ],
           "async": false,
-          "line_start": 143,
-          "line_end": 149
+          "line_start": 116,
+          "line_end": 122
         },
         {
-          "name": "is_equal",
-          "signature": "is_equal(req)",
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(req)",
           "parameters": [
             "req"
           ],
           "async": false,
-          "line_start": 152,
-          "line_end": 158
+          "line_start": 126,
+          "line_end": 132
         },
         {
-          "name": "greater_number",
-          "signature": "greater_number(req)",
+          "name": "percentage",
+          "signature": "percentage(req)",
           "parameters": [
             "req"
           ],
           "async": false,
-          "line_start": 161,
-          "line_end": 167
+          "line_start": 136,
+          "line_end": 145
         },
         {
-          "name": "smaller_number",
-          "signature": "smaller_number(req)",
+          "name": "clamp_value",
+          "signature": "clamp_value(req)",
           "parameters": [
             "req"
           ],
           "async": false,
-          "line_start": 170,
-          "line_end": 176
+          "line_start": 148,
+          "line_end": 159
+        },
+        {
+          "name": "calculate_percentage_change",
+          "signature": "calculate_percentage_change(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 163,
+          "line_end": 173
+        },
+        {
+          "name": "mean",
+          "signature": "mean(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 177,
+          "line_end": 186
+        },
+        {
+          "name": "range_value",
+          "signature": "range_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 190,
+          "line_end": 199
         }
       ],
       "symbols": [
-        {
-          "symbol_type": "class",
-          "name": "CalculationRequest",
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 7,
-          "line_end": 9
-        },
         {
           "symbol_type": "function",
           "name": "root",
@@ -255,8 +198,18 @@
           "parameters": [],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 13,
-          "line_end": 14
+          "line_start": 22,
+          "line_end": 26
+        },
+        {
+          "symbol_type": "function",
+          "name": "health_details",
+          "signature": "health_details()",
+          "parameters": [],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 30,
+          "line_end": 35
         },
         {
           "symbol_type": "function",
@@ -267,8 +220,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 18,
-          "line_end": 19
+          "line_start": 39,
+          "line_end": 45
         },
         {
           "symbol_type": "function",
@@ -279,8 +232,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 23,
-          "line_end": 24
+          "line_start": 49,
+          "line_end": 55
         },
         {
           "symbol_type": "function",
@@ -291,8 +244,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 28,
-          "line_end": 29
+          "line_start": 59,
+          "line_end": 65
         },
         {
           "symbol_type": "function",
@@ -303,8 +256,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 33,
-          "line_end": 36
+          "line_start": 69,
+          "line_end": 83
         },
         {
           "symbol_type": "function",
@@ -315,8 +268,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 39,
-          "line_end": 45
+          "line_start": 87,
+          "line_end": 93
         },
         {
           "symbol_type": "function",
@@ -327,32 +280,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 48,
-          "line_end": 53
-        },
-        {
-          "symbol_type": "function",
-          "name": "square",
-          "signature": "square(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 60,
-          "line_end": 65
-        },
-        {
-          "symbol_type": "function",
-          "name": "cube",
-          "signature": "cube(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 68,
-          "line_end": 73
+          "line_start": 97,
+          "line_end": 102
         },
         {
           "symbol_type": "function",
@@ -363,80 +292,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 76,
-          "line_end": 82
-        },
-        {
-          "symbol_type": "function",
-          "name": "maximum",
-          "signature": "maximum(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 85,
-          "line_end": 91
-        },
-        {
-          "symbol_type": "function",
-          "name": "minimum",
-          "signature": "minimum(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 94,
-          "line_end": 100
-        },
-        {
-          "symbol_type": "function",
-          "name": "sum_of_squares",
-          "signature": "sum_of_squares(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 107,
-          "line_end": 113
-        },
-        {
-          "symbol_type": "function",
-          "name": "difference_of_squares",
-          "signature": "difference_of_squares(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 116,
-          "line_end": 122
-        },
-        {
-          "symbol_type": "function",
-          "name": "sum_then_double",
-          "signature": "sum_then_double(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 125,
-          "line_end": 131
-        },
-        {
-          "symbol_type": "function",
-          "name": "product_plus_sum",
-          "signature": "product_plus_sum(req)",
-          "parameters": [
-            "req"
-          ],
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 134,
-          "line_end": 140
+          "line_start": 106,
+          "line_end": 112
         },
         {
           "symbol_type": "function",
@@ -447,44 +304,80 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 143,
-          "line_end": 149
+          "line_start": 116,
+          "line_end": 122
         },
         {
           "symbol_type": "function",
-          "name": "is_equal",
-          "signature": "is_equal(req)",
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(req)",
           "parameters": [
             "req"
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 152,
-          "line_end": 158
+          "line_start": 126,
+          "line_end": 132
         },
         {
           "symbol_type": "function",
-          "name": "greater_number",
-          "signature": "greater_number(req)",
+          "name": "percentage",
+          "signature": "percentage(req)",
           "parameters": [
             "req"
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 161,
-          "line_end": 167
+          "line_start": 136,
+          "line_end": 145
         },
         {
           "symbol_type": "function",
-          "name": "smaller_number",
-          "signature": "smaller_number(req)",
+          "name": "clamp_value",
+          "signature": "clamp_value(req)",
           "parameters": [
             "req"
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 170,
-          "line_end": 176
+          "line_start": 148,
+          "line_end": 159
+        },
+        {
+          "symbol_type": "function",
+          "name": "calculate_percentage_change",
+          "signature": "calculate_percentage_change(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 163,
+          "line_end": 173
+        },
+        {
+          "symbol_type": "function",
+          "name": "mean",
+          "signature": "mean(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 177,
+          "line_end": 186
+        },
+        {
+          "symbol_type": "function",
+          "name": "range_value",
+          "signature": "range_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 190,
+          "line_end": 199
         }
       ],
       "dependencies": [
@@ -499,11 +392,593 @@
           "category": "external"
         },
         {
+          "name": "app.models.CalculationRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.ClampRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.PercentageChangeRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.PercentageRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.ValuesRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.calculator_service.CalculatorService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.statistics_service.StatisticsService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.clamp",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.percentage_change",
+          "type": "from_import",
+          "category": "internal"
+        }
+      ]
+    },
+    {
+      "path": "app/models.py",
+      "name": "models.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 462,
+      "hash": "8b762f631612f3ede6f2bc0557f4619eebc6f3d9638adf66ac93cbcbe0920b94",
+      "last_modified": "2026-10-06T04:16:00+00:00",
+      "classes": [
+        {
+          "name": "CalculationRequest",
+          "line_start": 4,
+          "line_end": 6,
+          "methods": []
+        },
+        {
+          "name": "SingleNumberRequest",
+          "line_start": 9,
+          "line_end": 10,
+          "methods": []
+        },
+        {
+          "name": "PercentageRequest",
+          "line_start": 13,
+          "line_end": 15,
+          "methods": []
+        },
+        {
+          "name": "ClampRequest",
+          "line_start": 17,
+          "line_end": 20,
+          "methods": []
+        },
+        {
+          "name": "PercentageChangeRequest",
+          "line_start": 23,
+          "line_end": 25,
+          "methods": []
+        },
+        {
+          "name": "ValuesRequest",
+          "line_start": 28,
+          "line_end": 29,
+          "methods": []
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "CalculationRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 4,
+          "line_end": 6
+        },
+        {
+          "symbol_type": "class",
+          "name": "SingleNumberRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 9,
+          "line_end": 10
+        },
+        {
+          "symbol_type": "class",
+          "name": "PercentageRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 15
+        },
+        {
+          "symbol_type": "class",
+          "name": "ClampRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 17,
+          "line_end": 20
+        },
+        {
+          "symbol_type": "class",
+          "name": "PercentageChangeRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 23,
+          "line_end": 25
+        },
+        {
+          "symbol_type": "class",
+          "name": "ValuesRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 28,
+          "line_end": 29
+        }
+      ],
+      "dependencies": [
+        {
           "name": "pydantic.BaseModel",
           "type": "from_import",
           "category": "external"
         }
       ]
+    },
+    {
+      "path": "app/services/__init__.py",
+      "name": "__init__.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 34,
+      "hash": "0ca913444bcdcb8694c25a05f1dca4d5840eb06ffb34dd0d70aa626512ba2407",
+      "last_modified": "2026-10-06T04:16:00+00:00",
+      "classes": [],
+      "functions": [],
+      "symbols": [],
+      "dependencies": []
+    },
+    {
+      "path": "app/services/calculator_service.py",
+      "name": "calculator_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 1111,
+      "hash": "fdadc683d8fb27e47b767ef9ae4e92b5894c6cd5c583d811ded8a9120d69f7d3",
+      "last_modified": "2026-10-06T04:16:00+00:00",
+      "classes": [
+        {
+          "name": "CalculatorService",
+          "line_start": 1,
+          "line_end": 44,
+          "methods": [
+            {
+              "name": "add",
+              "signature": "add(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 5,
+              "line_end": 6
+            },
+            {
+              "name": "subtract",
+              "signature": "subtract(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 9,
+              "line_end": 10
+            },
+            {
+              "name": "multiply",
+              "signature": "multiply(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 13,
+              "line_end": 14
+            },
+            {
+              "name": "divide",
+              "signature": "divide(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 17,
+              "line_end": 20
+            },
+            {
+              "name": "power",
+              "signature": "power(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 23,
+              "line_end": 24
+            },
+            {
+              "name": "square",
+              "signature": "square(value)",
+              "parameters": [
+                "value"
+              ],
+              "async": false,
+              "line_start": 27,
+              "line_end": 28
+            },
+            {
+              "name": "average",
+              "signature": "average(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 31,
+              "line_end": 32
+            },
+            {
+              "name": "absolute_difference",
+              "signature": "absolute_difference(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 35,
+              "line_end": 36
+            },
+            {
+              "name": "sum_of_squares",
+              "signature": "sum_of_squares(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 39,
+              "line_end": 40
+            },
+            {
+              "name": "percentage",
+              "signature": "percentage(value,percentage)",
+              "parameters": [
+                "value",
+                "percentage"
+              ],
+              "async": false,
+              "line_start": 43,
+              "line_end": 44
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "CalculatorService",
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 44
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "add",
+          "signature": "add(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 5,
+          "line_end": 6
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "subtract",
+          "signature": "subtract(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 9,
+          "line_end": 10
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "multiply",
+          "signature": "multiply(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 14
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "divide",
+          "signature": "divide(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 17,
+          "line_end": 20
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "power",
+          "signature": "power(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 23,
+          "line_end": 24
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "square",
+          "signature": "square(value)",
+          "parameters": [
+            "value"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 27,
+          "line_end": 28
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "average",
+          "signature": "average(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 31,
+          "line_end": 32
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "absolute_difference",
+          "signature": "absolute_difference(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 35,
+          "line_end": 36
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 39,
+          "line_end": 40
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "percentage",
+          "signature": "percentage(value,percentage)",
+          "parameters": [
+            "value",
+            "percentage"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 43,
+          "line_end": 44
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "app/services/statistics_service.py",
+      "name": "statistics_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 460,
+      "hash": "fe48356f217de8505887212d9780058d0c37130573e4484f32dd018236490d83",
+      "last_modified": "2026-10-06T04:16:00+00:00",
+      "classes": [
+        {
+          "name": "StatisticsService",
+          "line_start": 1,
+          "line_end": 14,
+          "methods": [
+            {
+              "name": "mean",
+              "signature": "mean(values)",
+              "parameters": [
+                "values"
+              ],
+              "async": false,
+              "line_start": 5,
+              "line_end": 8
+            },
+            {
+              "name": "range_value",
+              "signature": "range_value(values)",
+              "parameters": [
+                "values"
+              ],
+              "async": false,
+              "line_start": 11,
+              "line_end": 14
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "StatisticsService",
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 14
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "StatisticsService",
+          "name": "mean",
+          "signature": "mean(values)",
+          "parameters": [
+            "values"
+          ],
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 5,
+          "line_end": 8
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "StatisticsService",
+          "name": "range_value",
+          "signature": "range_value(values)",
+          "parameters": [
+            "values"
+          ],
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 11,
+          "line_end": 14
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "app/utils.py",
+      "name": "utils.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 539,
+      "hash": "b427e7e09eeaffe3152582ae1631fd869e470c882813d8976345db9c54f52eac",
+      "last_modified": "2026-10-06T04:16:00+00:00",
+      "classes": [],
+      "functions": [
+        {
+          "name": "clamp",
+          "signature": "clamp(value,minimum,maximum)",
+          "parameters": [
+            "value",
+            "minimum",
+            "maximum"
+          ],
+          "async": false,
+          "line_start": 1,
+          "line_end": 5
+        },
+        {
+          "name": "percentage_change",
+          "signature": "percentage_change(old_value,new_value)",
+          "parameters": [
+            "old_value",
+            "new_value"
+          ],
+          "async": false,
+          "line_start": 8,
+          "line_end": 12
+        }
+      ],
+      "symbols": [
+        {
+          "symbol_type": "function",
+          "name": "clamp",
+          "signature": "clamp(value,minimum,maximum)",
+          "parameters": [
+            "value",
+            "minimum",
+            "maximum"
+          ],
+          "file": "app/utils.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 5
+        },
+        {
+          "symbol_type": "function",
+          "name": "percentage_change",
+          "signature": "percentage_change(old_value,new_value)",
+          "parameters": [
+            "old_value",
+            "new_value"
+          ],
+          "file": "app/utils.py",
+          "language": "Python",
+          "line_start": 8,
+          "line_end": 12
+        }
+      ],
+      "dependencies": []
     },
     {
       "path": "project-manifest.json",
@@ -512,8 +987,8 @@
       "type": "source",
       "language": "JSON",
       "size": 18844,
-      "hash": "31cfdd75d21a1fcc08abfbceafcb5fca37a3b84c8e9765f8edb270db59483a7b",
-      "last_modified": "2026-10-06T09:55:52.066927+00:00",
+      "hash": "349195f5cdedc96f1f5953d32753fbf70554a21e226704dc5363e9de78aa4c09",
+      "last_modified": "2026-10-06T10:15:48.179821+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -525,78 +1000,146 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 1553,
-      "hash": "d7b340c81fcdf32b6ae0ebceff2273bc7e1549a6deb8b2fc84866e716085ad30",
-      "last_modified": "2026-10-06T09:55:52.067934+00:00",
+      "size": 2411,
+      "hash": "c9e36ed312d49d502a601b18e6f48d2d130deca4c355f16a643fca9831870918",
+      "last_modified": "2026-10-06T04:16:00+00:00",
       "classes": [],
       "functions": [
+        {
+          "name": "test_root",
+          "signature": "test_root()",
+          "parameters": [],
+          "async": false,
+          "line_start": 8,
+          "line_end": 11
+        },
+        {
+          "name": "test_health_details",
+          "signature": "test_health_details()",
+          "parameters": [],
+          "async": false,
+          "line_start": 14,
+          "line_end": 17
+        },
         {
           "name": "test_add",
           "signature": "test_add()",
           "parameters": [],
           "async": false,
-          "line_start": 7,
-          "line_end": 10
+          "line_start": 20,
+          "line_end": 23
         },
         {
           "name": "test_divide_by_zero",
           "signature": "test_divide_by_zero()",
           "parameters": [],
           "async": false,
-          "line_start": 13,
-          "line_end": 15
-        },
-        {
-          "name": "test_sum_of_squares_endpoint",
-          "signature": "test_sum_of_squares_endpoint()",
-          "parameters": [],
-          "async": false,
-          "line_start": 21,
-          "line_end": 24
-        },
-        {
-          "name": "test_absolute_difference_endpoint",
-          "signature": "test_absolute_difference_endpoint()",
-          "parameters": [],
-          "async": false,
           "line_start": 26,
-          "line_end": 29
+          "line_end": 28
         },
         {
-          "name": "test_is_equal_endpoint",
-          "signature": "test_is_equal_endpoint()",
+          "name": "test_power",
+          "signature": "test_power()",
           "parameters": [],
           "async": false,
           "line_start": 31,
           "line_end": 34
         },
         {
-          "name": "test_greater_number_endpoint",
-          "signature": "test_greater_number_endpoint()",
+          "name": "test_average",
+          "signature": "test_average()",
           "parameters": [],
           "async": false,
-          "line_start": 36,
-          "line_end": 39
+          "line_start": 37,
+          "line_end": 40
         },
         {
-          "name": "test_manifest_all_files_marker",
-          "signature": "test_manifest_all_files_marker()",
+          "name": "test_absolute_difference",
+          "signature": "test_absolute_difference()",
           "parameters": [],
           "async": false,
-          "line_start": 42,
-          "line_end": 44
+          "line_start": 43,
+          "line_end": 49
+        },
+        {
+          "name": "test_sum_of_squares",
+          "signature": "test_sum_of_squares()",
+          "parameters": [],
+          "async": false,
+          "line_start": 52,
+          "line_end": 58
+        },
+        {
+          "name": "test_percentage",
+          "signature": "test_percentage()",
+          "parameters": [],
+          "async": false,
+          "line_start": 61,
+          "line_end": 67
+        },
+        {
+          "name": "test_clamp",
+          "signature": "test_clamp()",
+          "parameters": [],
+          "async": false,
+          "line_start": 69,
+          "line_end": 75
+        },
+        {
+          "name": "test_percentage_change",
+          "signature": "test_percentage_change()",
+          "parameters": [],
+          "async": false,
+          "line_start": 78,
+          "line_end": 84
+        },
+        {
+          "name": "test_mean",
+          "signature": "test_mean()",
+          "parameters": [],
+          "async": false,
+          "line_start": 87,
+          "line_end": 90
+        },
+        {
+          "name": "test_range",
+          "signature": "test_range()",
+          "parameters": [],
+          "async": false,
+          "line_start": 93,
+          "line_end": 96
         }
       ],
       "symbols": [
         {
           "symbol_type": "function",
+          "name": "test_root",
+          "signature": "test_root()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 8,
+          "line_end": 11
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_health_details",
+          "signature": "test_health_details()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 14,
+          "line_end": 17
+        },
+        {
+          "symbol_type": "function",
           "name": "test_add",
           "signature": "test_add()",
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
-          "line_start": 7,
-          "line_end": 10
+          "line_start": 20,
+          "line_end": 23
         },
         {
           "symbol_type": "function",
@@ -605,33 +1148,13 @@
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
-          "line_start": 13,
-          "line_end": 15
-        },
-        {
-          "symbol_type": "function",
-          "name": "test_sum_of_squares_endpoint",
-          "signature": "test_sum_of_squares_endpoint()",
-          "parameters": [],
-          "file": "tests/test_main.py",
-          "language": "Python",
-          "line_start": 21,
-          "line_end": 24
-        },
-        {
-          "symbol_type": "function",
-          "name": "test_absolute_difference_endpoint",
-          "signature": "test_absolute_difference_endpoint()",
-          "parameters": [],
-          "file": "tests/test_main.py",
-          "language": "Python",
           "line_start": 26,
-          "line_end": 29
+          "line_end": 28
         },
         {
           "symbol_type": "function",
-          "name": "test_is_equal_endpoint",
-          "signature": "test_is_equal_endpoint()",
+          "name": "test_power",
+          "signature": "test_power()",
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
@@ -640,23 +1163,83 @@
         },
         {
           "symbol_type": "function",
-          "name": "test_greater_number_endpoint",
-          "signature": "test_greater_number_endpoint()",
+          "name": "test_average",
+          "signature": "test_average()",
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
-          "line_start": 36,
-          "line_end": 39
+          "line_start": 37,
+          "line_end": 40
         },
         {
           "symbol_type": "function",
-          "name": "test_manifest_all_files_marker",
-          "signature": "test_manifest_all_files_marker()",
+          "name": "test_absolute_difference",
+          "signature": "test_absolute_difference()",
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
-          "line_start": 42,
-          "line_end": 44
+          "line_start": 43,
+          "line_end": 49
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_sum_of_squares",
+          "signature": "test_sum_of_squares()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 52,
+          "line_end": 58
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_percentage",
+          "signature": "test_percentage()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 61,
+          "line_end": 67
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_clamp",
+          "signature": "test_clamp()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 69,
+          "line_end": 75
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_percentage_change",
+          "signature": "test_percentage_change()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 78,
+          "line_end": 84
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_mean",
+          "signature": "test_mean()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 87,
+          "line_end": 90
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_range",
+          "signature": "test_range()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 93,
+          "line_end": 96
         }
       ],
       "dependencies": [
@@ -668,11 +1251,6 @@
         {
           "name": "app.main.app",
           "type": "from_import",
-          "category": "internal"
-        },
-        {
-          "name": "app.main",
-          "type": "import",
           "category": "internal"
         }
       ]
@@ -690,9 +1268,9 @@
       "task_run_id": "RUN-004",
       "git": {
         "branch": "main",
-        "commit_sha": "110c09627905eda9e106d2c5f6120ad56d6ccd4c"
+        "commit_sha": "7598903b190fdaa03c1fa947bd00edbe7dc2d5d1"
       },
-      "mapped_at": "2026-10-06T15:25:53+05:30",
+      "mapped_at": "2026-10-06T15:45:51+05:30",
       "code_reference": null,
       "unresolved_code_reference": {
         "file": "sample_service.py",

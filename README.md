@@ -5,7 +5,7 @@ source synchronization, traceability, validation, and GitHub push testing.
 
 ## Version
 
-Current test version: **1.3.0**
+Current test version: **1.4.0**
 
 ## V3 purpose
 
@@ -66,3 +66,24 @@ python -m pytest tests
 
 See `COZO_TEST_VERIFICATION.md` for the exact files, classes, methods, and
 endpoints that should appear in the generated manifest and later on GitHub.
+
+
+## V4 selective-change test
+
+V4 intentionally changes only a subset of the V3 files and adds exactly one
+new Python service file. This makes it easy to verify selective source sync.
+
+### New V4 file
+
+- `app/services/conversion_service.py`
+
+### New V4 endpoints
+
+- `POST /celsius-to-fahrenheit`
+- `POST /fahrenheit-to-celsius`
+- `POST /kilometers-to-miles`
+
+Files such as `app/models.py`, `app/utils.py`,
+`app/services/calculator_service.py`, `app/services/statistics_service.py`,
+`app/services/finance_service.py`, and `tests/test_services.py` are intentionally
+left unchanged from V3.

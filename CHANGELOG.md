@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.4.0 - Selective source-sync test
+
+Changed only selected V3 files:
+- `app/config.py`
+- `app/__init__.py`
+- `app/main.py`
+- `tests/test_main.py`
+- `README.md`
+- `CHANGELOG.md`
+- `COZO_TEST_VERIFICATION.md`
+
+Added exactly one new source file:
+- `app/services/conversion_service.py`
+
+Added endpoints:
+- `POST /celsius-to-fahrenheit`
+- `POST /fahrenheit-to-celsius`
+- `POST /kilometers-to-miles`
+
 ## 1.3.0 - Full repository change test
 
 Changed:

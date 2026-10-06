@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-06T14:20:49.417608+00:00",
+  "generated_at": "2026-10-06T14:29:37.104817+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "051fbae104acc80e6864739bfa062638955397bc"
+    "commit_sha": "0d204a30e5186bdde4de5864947d7f67eac4b81b"
   },
   "files": [
     {
@@ -15,8 +15,8 @@
       "type": "source",
       "language": "Python",
       "size": 109,
-      "hash": "8fe48c377d703f01af72710a0a97e7bca91eed7aad60b63ad1cb895bd8381fd5",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "hash": "8b68d979500ec202d45a6e5f556bb0ab127a31531b47441d27f12904f3576f3a",
+      "last_modified": "2026-10-06T08:56:54+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -28,9 +28,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 276,
-      "hash": "1838c7debe0919583b8ff0567d3745cb3655f2830317d313d08f3e75ca2a90ba",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "size": 288,
+      "hash": "75f07c58ed486bfc9fb199cfa5a1411e410bbee6df4fe74e25b1a12fdf3b1500",
+      "last_modified": "2026-10-06T08:56:54+00:00",
       "classes": [
         {
           "name": "AppConfig",
@@ -64,9 +64,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 6614,
-      "hash": "61387cea4f0b3730c3d2cac32b98ee73f3bd78793b0844f45a8696db316f6684",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "size": 7759,
+      "hash": "7ad62cdec0b506e5aad47d72ce12a6230deb0951ebc0951fbc9b673912728ee1",
+      "last_modified": "2026-10-06T08:56:54+00:00",
       "classes": [],
       "functions": [
         {
@@ -74,16 +74,16 @@
           "signature": "root()",
           "parameters": [],
           "async": false,
-          "line_start": 25,
-          "line_end": 29
+          "line_start": 27,
+          "line_end": 31
         },
         {
           "name": "health_details",
           "signature": "health_details()",
           "parameters": [],
           "async": false,
-          "line_start": 33,
-          "line_end": 44
+          "line_start": 35,
+          "line_end": 46
         },
         {
           "name": "add",
@@ -92,8 +92,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 48,
-          "line_end": 54
+          "line_start": 50,
+          "line_end": 56
         },
         {
           "name": "subtract",
@@ -102,8 +102,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 58,
-          "line_end": 64
+          "line_start": 60,
+          "line_end": 66
         },
         {
           "name": "multiply",
@@ -112,8 +112,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 68,
-          "line_end": 74
+          "line_start": 70,
+          "line_end": 76
         },
         {
           "name": "divide",
@@ -122,8 +122,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 78,
-          "line_end": 89
+          "line_start": 80,
+          "line_end": 91
         },
         {
           "name": "power",
@@ -132,8 +132,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 93,
-          "line_end": 99
+          "line_start": 95,
+          "line_end": 101
         },
         {
           "name": "square",
@@ -142,8 +142,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 103,
-          "line_end": 108
+          "line_start": 105,
+          "line_end": 110
         },
         {
           "name": "average",
@@ -152,8 +152,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 112,
-          "line_end": 118
+          "line_start": 114,
+          "line_end": 120
         },
         {
           "name": "absolute_difference",
@@ -162,8 +162,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 122,
-          "line_end": 128
+          "line_start": 124,
+          "line_end": 130
         },
         {
           "name": "sum_of_squares",
@@ -172,8 +172,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 132,
-          "line_end": 138
+          "line_start": 134,
+          "line_end": 140
         },
         {
           "name": "percentage",
@@ -182,8 +182,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 142,
-          "line_end": 151
+          "line_start": 144,
+          "line_end": 153
         },
         {
           "name": "clamp_value",
@@ -192,8 +192,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 155,
-          "line_end": 167
+          "line_start": 157,
+          "line_end": 169
         },
         {
           "name": "calculate_percentage_change",
@@ -202,8 +202,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 171,
-          "line_end": 182
+          "line_start": 173,
+          "line_end": 184
         },
         {
           "name": "mean",
@@ -212,8 +212,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 186,
-          "line_end": 191
+          "line_start": 188,
+          "line_end": 193
         },
         {
           "name": "range_value",
@@ -222,8 +222,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 195,
-          "line_end": 200
+          "line_start": 197,
+          "line_end": 202
         },
         {
           "name": "median_value",
@@ -232,8 +232,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 204,
-          "line_end": 209
+          "line_start": 206,
+          "line_end": 211
         },
         {
           "name": "weighted_average",
@@ -242,8 +242,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 213,
-          "line_end": 227
+          "line_start": 215,
+          "line_end": 229
         },
         {
           "name": "normalize_value",
@@ -252,8 +252,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 231,
-          "line_end": 243
+          "line_start": 233,
+          "line_end": 245
         },
         {
           "name": "ratio",
@@ -262,8 +262,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 247,
-          "line_end": 258
+          "line_start": 249,
+          "line_end": 260
         },
         {
           "name": "compound_amount",
@@ -272,8 +272,38 @@
             "req"
           ],
           "async": false,
-          "line_start": 262,
-          "line_end": 276
+          "line_start": 264,
+          "line_end": 278
+        },
+        {
+          "name": "celsius_to_fahrenheit",
+          "signature": "celsius_to_fahrenheit(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 287,
+          "line_end": 295
+        },
+        {
+          "name": "fahrenheit_to_celsius",
+          "signature": "fahrenheit_to_celsius(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 299,
+          "line_end": 307
+        },
+        {
+          "name": "kilometers_to_miles",
+          "signature": "kilometers_to_miles(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 311,
+          "line_end": 319
         }
       ],
       "symbols": [
@@ -284,8 +314,8 @@
           "parameters": [],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 25,
-          "line_end": 29
+          "line_start": 27,
+          "line_end": 31
         },
         {
           "symbol_type": "function",
@@ -294,8 +324,8 @@
           "parameters": [],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 33,
-          "line_end": 44
+          "line_start": 35,
+          "line_end": 46
         },
         {
           "symbol_type": "function",
@@ -306,8 +336,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 48,
-          "line_end": 54
+          "line_start": 50,
+          "line_end": 56
         },
         {
           "symbol_type": "function",
@@ -318,8 +348,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 58,
-          "line_end": 64
+          "line_start": 60,
+          "line_end": 66
         },
         {
           "symbol_type": "function",
@@ -330,8 +360,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 68,
-          "line_end": 74
+          "line_start": 70,
+          "line_end": 76
         },
         {
           "symbol_type": "function",
@@ -342,8 +372,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 78,
-          "line_end": 89
+          "line_start": 80,
+          "line_end": 91
         },
         {
           "symbol_type": "function",
@@ -354,8 +384,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 93,
-          "line_end": 99
+          "line_start": 95,
+          "line_end": 101
         },
         {
           "symbol_type": "function",
@@ -366,8 +396,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 103,
-          "line_end": 108
+          "line_start": 105,
+          "line_end": 110
         },
         {
           "symbol_type": "function",
@@ -378,8 +408,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 112,
-          "line_end": 118
+          "line_start": 114,
+          "line_end": 120
         },
         {
           "symbol_type": "function",
@@ -390,8 +420,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 122,
-          "line_end": 128
+          "line_start": 124,
+          "line_end": 130
         },
         {
           "symbol_type": "function",
@@ -402,8 +432,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 132,
-          "line_end": 138
+          "line_start": 134,
+          "line_end": 140
         },
         {
           "symbol_type": "function",
@@ -414,8 +444,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 142,
-          "line_end": 151
+          "line_start": 144,
+          "line_end": 153
         },
         {
           "symbol_type": "function",
@@ -426,8 +456,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 155,
-          "line_end": 167
+          "line_start": 157,
+          "line_end": 169
         },
         {
           "symbol_type": "function",
@@ -438,8 +468,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 171,
-          "line_end": 182
+          "line_start": 173,
+          "line_end": 184
         },
         {
           "symbol_type": "function",
@@ -450,8 +480,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 186,
-          "line_end": 191
+          "line_start": 188,
+          "line_end": 193
         },
         {
           "symbol_type": "function",
@@ -462,8 +492,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 195,
-          "line_end": 200
+          "line_start": 197,
+          "line_end": 202
         },
         {
           "symbol_type": "function",
@@ -474,8 +504,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 204,
-          "line_end": 209
+          "line_start": 206,
+          "line_end": 211
         },
         {
           "symbol_type": "function",
@@ -486,8 +516,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 213,
-          "line_end": 227
+          "line_start": 215,
+          "line_end": 229
         },
         {
           "symbol_type": "function",
@@ -498,8 +528,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 231,
-          "line_end": 243
+          "line_start": 233,
+          "line_end": 245
         },
         {
           "symbol_type": "function",
@@ -510,8 +540,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 247,
-          "line_end": 258
+          "line_start": 249,
+          "line_end": 260
         },
         {
           "symbol_type": "function",
@@ -522,8 +552,44 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 262,
-          "line_end": 276
+          "line_start": 264,
+          "line_end": 278
+        },
+        {
+          "symbol_type": "function",
+          "name": "celsius_to_fahrenheit",
+          "signature": "celsius_to_fahrenheit(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 287,
+          "line_end": 295
+        },
+        {
+          "symbol_type": "function",
+          "name": "fahrenheit_to_celsius",
+          "signature": "fahrenheit_to_celsius(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 299,
+          "line_end": 307
+        },
+        {
+          "symbol_type": "function",
+          "name": "kilometers_to_miles",
+          "signature": "kilometers_to_miles(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 311,
+          "line_end": 319
         }
       ],
       "dependencies": [
@@ -573,6 +639,11 @@
           "category": "internal"
         },
         {
+          "name": "app.models.SingleNumberRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
           "name": "app.models.ValuesRequest",
           "type": "from_import",
           "category": "internal"
@@ -594,6 +665,11 @@
         },
         {
           "name": "app.services.StatisticsService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.conversion_service.ConversionService",
           "type": "from_import",
           "category": "internal"
         },
@@ -627,7 +703,7 @@
       "language": "Python",
       "size": 913,
       "hash": "744e56955b1436ab589355e7a479a81006efe42c99444443f37f48e6e98b94ab",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [
         {
           "name": "CalculationRequest",
@@ -780,7 +856,7 @@
       "language": "Python",
       "size": 329,
       "hash": "8dbab62f079adcd5754088b41e8504ce99db4cefde4fdce7bf2dd127b5155ca8",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -810,7 +886,7 @@
       "language": "Python",
       "size": 1372,
       "hash": "cbe31e138ee41df695f67ab78e28ce788c5b9a454d77ede3f45a4630c4bff355",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [
         {
           "name": "CalculatorService",
@@ -1132,6 +1208,108 @@
       "dependencies": []
     },
     {
+      "path": "app/services/conversion_service.py",
+      "name": "conversion_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 454,
+      "hash": "b86446b6dd0819b719209a3f9c536763a6a5cc0847f2d37057cae3465419175f",
+      "last_modified": "2026-10-06T08:56:54+00:00",
+      "classes": [
+        {
+          "name": "ConversionService",
+          "line_start": 1,
+          "line_end": 16,
+          "methods": [
+            {
+              "name": "celsius_to_fahrenheit",
+              "signature": "celsius_to_fahrenheit(value)",
+              "parameters": [
+                "value"
+              ],
+              "async": false,
+              "line_start": 7,
+              "line_end": 8
+            },
+            {
+              "name": "fahrenheit_to_celsius",
+              "signature": "fahrenheit_to_celsius(value)",
+              "parameters": [
+                "value"
+              ],
+              "async": false,
+              "line_start": 11,
+              "line_end": 12
+            },
+            {
+              "name": "kilometers_to_miles",
+              "signature": "kilometers_to_miles(cls,value)",
+              "parameters": [
+                "cls",
+                "value"
+              ],
+              "async": false,
+              "line_start": 15,
+              "line_end": 16
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "ConversionService",
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 16
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "ConversionService",
+          "name": "celsius_to_fahrenheit",
+          "signature": "celsius_to_fahrenheit(value)",
+          "parameters": [
+            "value"
+          ],
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 7,
+          "line_end": 8
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "ConversionService",
+          "name": "fahrenheit_to_celsius",
+          "signature": "fahrenheit_to_celsius(value)",
+          "parameters": [
+            "value"
+          ],
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 11,
+          "line_end": 12
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "ConversionService",
+          "name": "kilometers_to_miles",
+          "signature": "kilometers_to_miles(cls,value)",
+          "parameters": [
+            "cls",
+            "value"
+          ],
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 15,
+          "line_end": 16
+        }
+      ],
+      "dependencies": []
+    },
+    {
       "path": "app/services/finance_service.py",
       "name": "finance_service.py",
       "extension": ".py",
@@ -1139,7 +1317,7 @@
       "language": "Python",
       "size": 612,
       "hash": "d8f2d01e15fa4f29eae92cd6946927a7a0626a7709ae4d97238c5bb9b50bc765",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [
         {
           "name": "FinanceService",
@@ -1226,7 +1404,7 @@
       "language": "Python",
       "size": 1251,
       "hash": "e2e4c133730ebe1f76af52b5dca171b9ecd3208e2e93d53574ecf79c39809fbb",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [
         {
           "name": "StatisticsService",
@@ -1357,7 +1535,7 @@
       "language": "Python",
       "size": 966,
       "hash": "109e907125f8d91f6c388f35187aaf4e20872cfb43c59c7d83b0c60192749503",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [],
       "functions": [
         {
@@ -1472,8 +1650,8 @@
       "type": "source",
       "language": "JSON",
       "size": 51962,
-      "hash": "9d045e2125eae39d03780af31eddb55fc61c154b08cace844796cefe8d033410",
-      "last_modified": "2026-10-06T14:20:44.926253+00:00",
+      "hash": "424340147481fa1d3b0b8889faf5955f44ceac97f5f5d433382a9e445910e973",
+      "last_modified": "2026-10-06T14:29:32.120190+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -1485,9 +1663,9 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 2254,
-      "hash": "cbf05681b81146b2a51cf41edbef1b075fc27c28c17deaaf1a2bb99a9f22daf3",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "size": 2897,
+      "hash": "9acb2e77f19415094e6b83d9351d55a9de5b18b6a8eececaf393595ee910dc33",
+      "last_modified": "2026-10-06T08:56:54+00:00",
       "classes": [],
       "functions": [
         {
@@ -1577,6 +1755,30 @@
           "async": false,
           "line_start": 79,
           "line_end": 90
+        },
+        {
+          "name": "test_celsius_to_fahrenheit",
+          "signature": "test_celsius_to_fahrenheit()",
+          "parameters": [],
+          "async": false,
+          "line_start": 93,
+          "line_end": 99
+        },
+        {
+          "name": "test_fahrenheit_to_celsius",
+          "signature": "test_fahrenheit_to_celsius()",
+          "parameters": [],
+          "async": false,
+          "line_start": 102,
+          "line_end": 108
+        },
+        {
+          "name": "test_kilometers_to_miles",
+          "signature": "test_kilometers_to_miles()",
+          "parameters": [],
+          "async": false,
+          "line_start": 111,
+          "line_end": 117
         }
       ],
       "symbols": [
@@ -1689,6 +1891,36 @@
           "language": "Python",
           "line_start": 79,
           "line_end": 90
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_celsius_to_fahrenheit",
+          "signature": "test_celsius_to_fahrenheit()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 93,
+          "line_end": 99
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_fahrenheit_to_celsius",
+          "signature": "test_fahrenheit_to_celsius()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 102,
+          "line_end": 108
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_kilometers_to_miles",
+          "signature": "test_kilometers_to_miles()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 111,
+          "line_end": 117
         }
       ],
       "dependencies": [
@@ -1712,7 +1944,7 @@
       "language": "Python",
       "size": 737,
       "hash": "2d27443376e2df3e150f3c75c232fd48ead3cc8640315647f746232ab78d33b7",
-      "last_modified": "2026-10-06T06:40:14+00:00",
+      "last_modified": "2026-10-06T08:55:02+00:00",
       "classes": [],
       "functions": [
         {
@@ -1867,9 +2099,9 @@
       "task_run_id": "RUN-004",
       "git": {
         "branch": "main",
-        "commit_sha": "051fbae104acc80e6864739bfa062638955397bc"
+        "commit_sha": "0d204a30e5186bdde4de5864947d7f67eac4b81b"
       },
-      "mapped_at": "2026-10-06T19:50:48+05:30",
+      "mapped_at": "2026-10-06T19:59:36+05:30",
       "code_reference": null,
       "unresolved_code_reference": {
         "file": "sample_service.py",

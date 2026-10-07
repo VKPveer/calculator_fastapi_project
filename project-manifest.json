@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-06T14:38:46.253249+00:00",
+  "generated_at": "2026-10-07T08:45:22.835246+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "46dcd7bb0db1d495b223244ac9376267161b4cbc"
+    "commit_sha": "9ddf44e868a537de5d66485f61b0b96f50b9d045"
   },
   "files": [
     {
@@ -1650,8 +1650,8 @@
       "type": "source",
       "language": "JSON",
       "size": 58822,
-      "hash": "79b04694775860b495336d12758f4cd2876d9c3a49cb0b2ed516092f993a9ac3",
-      "last_modified": "2026-10-06T14:38:39.188759+00:00",
+      "hash": "372b7c712c962dfc18a41f75d5b28d5b3e565e8d0f869be5aafb4c045835a0e9",
+      "last_modified": "2026-10-07T08:45:18.675626+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -2099,14 +2099,15 @@
       "task_run_id": "RUN-004",
       "git": {
         "branch": "main",
-        "commit_sha": "46dcd7bb0db1d495b223244ac9376267161b4cbc"
+        "commit_sha": "9ddf44e868a537de5d66485f61b0b96f50b9d045"
       },
-      "mapped_at": "2026-10-06T20:08:45+05:30",
+      "mapped_at": "2026-10-07T14:15:22+05:30",
       "code_reference": null,
       "unresolved_code_reference": {
         "file": "sample_service.py",
         "class_name": "UserService",
-        "symbol": "create_user"
+        "symbol": "create_user",
+        "reason": "No unique matching symbol was found in symbols.json."
       }
     }
   ]

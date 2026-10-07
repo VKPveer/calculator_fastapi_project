@@ -1,11 +1,11 @@
 {
   "manifest_version": "1.0",
-  "generated_at": "2026-10-05T14:50:50.024934+00:00",
+  "generated_at": "2026-10-07T09:01:16.539509+00:00",
   "repository": {
     "name": "calculator_fastapi_project",
     "url": "https://github.com/VKPveer/calculator_fastapi_project.git",
     "branch": "master",
-    "commit_sha": "a3c791e637cef926712f5f9f7a8be7366adb36ca"
+    "commit_sha": "3b430dbb8ec9d6e2546277acb00ee5fa75f02e5f"
   },
   "files": [
     {
@@ -14,13 +14,49 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 0,
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "last_modified": "2026-10-05T14:50:40.060617+00:00",
+      "size": 109,
+      "hash": "99e74e8fc0f7289817597474625c115b7ce505c5b0a05b5e6808f9ddc6fa085e",
+      "last_modified": "2026-10-07T03:25:50+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
       "dependencies": []
+    },
+    {
+      "path": "app/config.py",
+      "name": "config.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 293,
+      "hash": "384b8aab259ab1779c5351a1f69917f8d2b96a177347d8ef3ffb8935245d6e7c",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "AppConfig",
+          "line_start": 5,
+          "line_end": 10,
+          "methods": []
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "AppConfig",
+          "file": "app/config.py",
+          "language": "Python",
+          "line_start": 5,
+          "line_end": 10
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "dataclasses.dataclass",
+          "type": "from_import",
+          "category": "standard_library"
+        }
+      ]
     },
     {
       "path": "app/main.py",
@@ -28,25 +64,26 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 1354,
-      "hash": "8cd4c607a39f9dfcaa477eb3661aee119fe7ea5d522cfe2f701e2857f69896be",
-      "last_modified": "2026-10-05T14:50:40.607342+00:00",
-      "classes": [
-        {
-          "name": "CalculationRequest",
-          "line_start": 7,
-          "line_end": 9,
-          "methods": []
-        }
-      ],
+      "size": 8874,
+      "hash": "d3312823fe7a76582b3c54b104efafb9ff8975dc75748377a5fb9f57078804d2",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [],
       "functions": [
         {
           "name": "root",
           "signature": "root()",
           "parameters": [],
           "async": false,
-          "line_start": 13,
-          "line_end": 14
+          "line_start": 29,
+          "line_end": 33
+        },
+        {
+          "name": "health_details",
+          "signature": "health_details()",
+          "parameters": [],
+          "async": false,
+          "line_start": 37,
+          "line_end": 48
         },
         {
           "name": "add",
@@ -55,8 +92,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 18,
-          "line_end": 19
+          "line_start": 52,
+          "line_end": 58
         },
         {
           "name": "subtract",
@@ -65,8 +102,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 23,
-          "line_end": 24
+          "line_start": 62,
+          "line_end": 68
         },
         {
           "name": "multiply",
@@ -75,8 +112,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 28,
-          "line_end": 29
+          "line_start": 72,
+          "line_end": 78
         },
         {
           "name": "divide",
@@ -85,8 +122,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 33,
-          "line_end": 36
+          "line_start": 82,
+          "line_end": 93
         },
         {
           "name": "power",
@@ -95,8 +132,8 @@
             "req"
           ],
           "async": false,
-          "line_start": 39,
-          "line_end": 45
+          "line_start": 97,
+          "line_end": 103
         },
         {
           "name": "square",
@@ -105,19 +142,191 @@
             "req"
           ],
           "async": false,
-          "line_start": 48,
-          "line_end": 53
+          "line_start": 107,
+          "line_end": 112
+        },
+        {
+          "name": "average",
+          "signature": "average(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 116,
+          "line_end": 122
+        },
+        {
+          "name": "absolute_difference",
+          "signature": "absolute_difference(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 126,
+          "line_end": 132
+        },
+        {
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 136,
+          "line_end": 142
+        },
+        {
+          "name": "percentage",
+          "signature": "percentage(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 146,
+          "line_end": 155
+        },
+        {
+          "name": "clamp_value",
+          "signature": "clamp_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 159,
+          "line_end": 171
+        },
+        {
+          "name": "calculate_percentage_change",
+          "signature": "calculate_percentage_change(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 175,
+          "line_end": 186
+        },
+        {
+          "name": "mean",
+          "signature": "mean(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 190,
+          "line_end": 195
+        },
+        {
+          "name": "range_value",
+          "signature": "range_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 199,
+          "line_end": 204
+        },
+        {
+          "name": "median_value",
+          "signature": "median_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 208,
+          "line_end": 213
+        },
+        {
+          "name": "weighted_average",
+          "signature": "weighted_average(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 217,
+          "line_end": 231
+        },
+        {
+          "name": "normalize_value",
+          "signature": "normalize_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 235,
+          "line_end": 247
+        },
+        {
+          "name": "ratio",
+          "signature": "ratio(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 251,
+          "line_end": 262
+        },
+        {
+          "name": "compound_amount",
+          "signature": "compound_amount(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 266,
+          "line_end": 280
+        },
+        {
+          "name": "celsius_to_fahrenheit",
+          "signature": "celsius_to_fahrenheit(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 289,
+          "line_end": 297
+        },
+        {
+          "name": "fahrenheit_to_celsius",
+          "signature": "fahrenheit_to_celsius(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 301,
+          "line_end": 309
+        },
+        {
+          "name": "kilometers_to_miles",
+          "signature": "kilometers_to_miles(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 313,
+          "line_end": 321
+        },
+        {
+          "name": "tax_amount",
+          "signature": "tax_amount(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 330,
+          "line_end": 344
+        },
+        {
+          "name": "total_with_tax",
+          "signature": "total_with_tax(req)",
+          "parameters": [
+            "req"
+          ],
+          "async": false,
+          "line_start": 348,
+          "line_end": 362
         }
       ],
       "symbols": [
-        {
-          "symbol_type": "class",
-          "name": "CalculationRequest",
-          "file": "app/main.py",
-          "language": "Python",
-          "line_start": 7,
-          "line_end": 9
-        },
         {
           "symbol_type": "function",
           "name": "root",
@@ -125,8 +334,18 @@
           "parameters": [],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 13,
-          "line_end": 14
+          "line_start": 29,
+          "line_end": 33
+        },
+        {
+          "symbol_type": "function",
+          "name": "health_details",
+          "signature": "health_details()",
+          "parameters": [],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 37,
+          "line_end": 48
         },
         {
           "symbol_type": "function",
@@ -137,8 +356,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 18,
-          "line_end": 19
+          "line_start": 52,
+          "line_end": 58
         },
         {
           "symbol_type": "function",
@@ -149,8 +368,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 23,
-          "line_end": 24
+          "line_start": 62,
+          "line_end": 68
         },
         {
           "symbol_type": "function",
@@ -161,8 +380,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 28,
-          "line_end": 29
+          "line_start": 72,
+          "line_end": 78
         },
         {
           "symbol_type": "function",
@@ -173,8 +392,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 33,
-          "line_end": 36
+          "line_start": 82,
+          "line_end": 93
         },
         {
           "symbol_type": "function",
@@ -185,8 +404,8 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 39,
-          "line_end": 45
+          "line_start": 97,
+          "line_end": 103
         },
         {
           "symbol_type": "function",
@@ -197,8 +416,224 @@
           ],
           "file": "app/main.py",
           "language": "Python",
-          "line_start": 48,
-          "line_end": 53
+          "line_start": 107,
+          "line_end": 112
+        },
+        {
+          "symbol_type": "function",
+          "name": "average",
+          "signature": "average(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 116,
+          "line_end": 122
+        },
+        {
+          "symbol_type": "function",
+          "name": "absolute_difference",
+          "signature": "absolute_difference(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 126,
+          "line_end": 132
+        },
+        {
+          "symbol_type": "function",
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 136,
+          "line_end": 142
+        },
+        {
+          "symbol_type": "function",
+          "name": "percentage",
+          "signature": "percentage(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 146,
+          "line_end": 155
+        },
+        {
+          "symbol_type": "function",
+          "name": "clamp_value",
+          "signature": "clamp_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 159,
+          "line_end": 171
+        },
+        {
+          "symbol_type": "function",
+          "name": "calculate_percentage_change",
+          "signature": "calculate_percentage_change(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 175,
+          "line_end": 186
+        },
+        {
+          "symbol_type": "function",
+          "name": "mean",
+          "signature": "mean(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 190,
+          "line_end": 195
+        },
+        {
+          "symbol_type": "function",
+          "name": "range_value",
+          "signature": "range_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 199,
+          "line_end": 204
+        },
+        {
+          "symbol_type": "function",
+          "name": "median_value",
+          "signature": "median_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 208,
+          "line_end": 213
+        },
+        {
+          "symbol_type": "function",
+          "name": "weighted_average",
+          "signature": "weighted_average(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 217,
+          "line_end": 231
+        },
+        {
+          "symbol_type": "function",
+          "name": "normalize_value",
+          "signature": "normalize_value(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 235,
+          "line_end": 247
+        },
+        {
+          "symbol_type": "function",
+          "name": "ratio",
+          "signature": "ratio(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 251,
+          "line_end": 262
+        },
+        {
+          "symbol_type": "function",
+          "name": "compound_amount",
+          "signature": "compound_amount(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 266,
+          "line_end": 280
+        },
+        {
+          "symbol_type": "function",
+          "name": "celsius_to_fahrenheit",
+          "signature": "celsius_to_fahrenheit(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 289,
+          "line_end": 297
+        },
+        {
+          "symbol_type": "function",
+          "name": "fahrenheit_to_celsius",
+          "signature": "fahrenheit_to_celsius(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 301,
+          "line_end": 309
+        },
+        {
+          "symbol_type": "function",
+          "name": "kilometers_to_miles",
+          "signature": "kilometers_to_miles(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 313,
+          "line_end": 321
+        },
+        {
+          "symbol_type": "function",
+          "name": "tax_amount",
+          "signature": "tax_amount(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 330,
+          "line_end": 344
+        },
+        {
+          "symbol_type": "function",
+          "name": "total_with_tax",
+          "signature": "total_with_tax(req)",
+          "parameters": [
+            "req"
+          ],
+          "file": "app/main.py",
+          "language": "Python",
+          "line_start": 348,
+          "line_end": 362
         }
       ],
       "dependencies": [
@@ -213,11 +648,1149 @@
           "category": "external"
         },
         {
+          "name": "app.config.CONFIG",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.CalculationRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.ClampRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.CompoundInterestRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.NormalizeRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.PercentageChangeRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.PercentageRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.SingleNumberRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.TaxRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.ValuesRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.models.WeightedAverageRequest",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.CalculatorService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.FinanceService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.StatisticsService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.conversion_service.ConversionService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.tax_service.TaxService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.clamp",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.normalize",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.percentage_change",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.round_result",
+          "type": "from_import",
+          "category": "internal"
+        }
+      ]
+    },
+    {
+      "path": "app/models.py",
+      "name": "models.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 985,
+      "hash": "722ea6237bd452f9e4786b3339c998cadca57971d3585143f35313ae6dcaca9d",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "CalculationRequest",
+          "line_start": 4,
+          "line_end": 6,
+          "methods": []
+        },
+        {
+          "name": "SingleNumberRequest",
+          "line_start": 9,
+          "line_end": 10,
+          "methods": []
+        },
+        {
+          "name": "PercentageRequest",
+          "line_start": 13,
+          "line_end": 15,
+          "methods": []
+        },
+        {
+          "name": "ClampRequest",
+          "line_start": 18,
+          "line_end": 21,
+          "methods": []
+        },
+        {
+          "name": "PercentageChangeRequest",
+          "line_start": 24,
+          "line_end": 26,
+          "methods": []
+        },
+        {
+          "name": "ValuesRequest",
+          "line_start": 29,
+          "line_end": 30,
+          "methods": []
+        },
+        {
+          "name": "WeightedAverageRequest",
+          "line_start": 33,
+          "line_end": 35,
+          "methods": []
+        },
+        {
+          "name": "CompoundInterestRequest",
+          "line_start": 38,
+          "line_end": 42,
+          "methods": []
+        },
+        {
+          "name": "NormalizeRequest",
+          "line_start": 45,
+          "line_end": 48,
+          "methods": []
+        },
+        {
+          "name": "TaxRequest",
+          "line_start": 51,
+          "line_end": 53,
+          "methods": []
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "CalculationRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 4,
+          "line_end": 6
+        },
+        {
+          "symbol_type": "class",
+          "name": "SingleNumberRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 9,
+          "line_end": 10
+        },
+        {
+          "symbol_type": "class",
+          "name": "PercentageRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 15
+        },
+        {
+          "symbol_type": "class",
+          "name": "ClampRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 18,
+          "line_end": 21
+        },
+        {
+          "symbol_type": "class",
+          "name": "PercentageChangeRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 24,
+          "line_end": 26
+        },
+        {
+          "symbol_type": "class",
+          "name": "ValuesRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 29,
+          "line_end": 30
+        },
+        {
+          "symbol_type": "class",
+          "name": "WeightedAverageRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 33,
+          "line_end": 35
+        },
+        {
+          "symbol_type": "class",
+          "name": "CompoundInterestRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 38,
+          "line_end": 42
+        },
+        {
+          "symbol_type": "class",
+          "name": "NormalizeRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 45,
+          "line_end": 48
+        },
+        {
+          "symbol_type": "class",
+          "name": "TaxRequest",
+          "file": "app/models.py",
+          "language": "Python",
+          "line_start": 51,
+          "line_end": 53
+        }
+      ],
+      "dependencies": [
+        {
           "name": "pydantic.BaseModel",
+          "type": "from_import",
+          "category": "external"
+        },
+        {
+          "name": "pydantic.Field",
           "type": "from_import",
           "category": "external"
         }
       ]
+    },
+    {
+      "path": "app/services/__init__.py",
+      "name": "__init__.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 329,
+      "hash": "8dbab62f079adcd5754088b41e8504ce99db4cefde4fdce7bf2dd127b5155ca8",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [],
+      "functions": [],
+      "symbols": [],
+      "dependencies": [
+        {
+          "name": "app.services.calculator_service.CalculatorService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.finance_service.FinanceService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.statistics_service.StatisticsService",
+          "type": "from_import",
+          "category": "internal"
+        }
+      ]
+    },
+    {
+      "path": "app/services/calculator_service.py",
+      "name": "calculator_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 1372,
+      "hash": "cbe31e138ee41df695f67ab78e28ce788c5b9a454d77ede3f45a4630c4bff355",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "CalculatorService",
+          "line_start": 1,
+          "line_end": 54,
+          "methods": [
+            {
+              "name": "add",
+              "signature": "add(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 5,
+              "line_end": 6
+            },
+            {
+              "name": "subtract",
+              "signature": "subtract(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 9,
+              "line_end": 10
+            },
+            {
+              "name": "multiply",
+              "signature": "multiply(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 13,
+              "line_end": 14
+            },
+            {
+              "name": "divide",
+              "signature": "divide(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 17,
+              "line_end": 20
+            },
+            {
+              "name": "power",
+              "signature": "power(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 23,
+              "line_end": 24
+            },
+            {
+              "name": "square",
+              "signature": "square(value)",
+              "parameters": [
+                "value"
+              ],
+              "async": false,
+              "line_start": 27,
+              "line_end": 28
+            },
+            {
+              "name": "average",
+              "signature": "average(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 31,
+              "line_end": 32
+            },
+            {
+              "name": "absolute_difference",
+              "signature": "absolute_difference(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 35,
+              "line_end": 36
+            },
+            {
+              "name": "sum_of_squares",
+              "signature": "sum_of_squares(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 39,
+              "line_end": 40
+            },
+            {
+              "name": "percentage",
+              "signature": "percentage(value,percentage)",
+              "parameters": [
+                "value",
+                "percentage"
+              ],
+              "async": false,
+              "line_start": 43,
+              "line_end": 44
+            },
+            {
+              "name": "midpoint",
+              "signature": "midpoint(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 47,
+              "line_end": 48
+            },
+            {
+              "name": "ratio",
+              "signature": "ratio(a,b)",
+              "parameters": [
+                "a",
+                "b"
+              ],
+              "async": false,
+              "line_start": 51,
+              "line_end": 54
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "CalculatorService",
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 54
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "add",
+          "signature": "add(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 5,
+          "line_end": 6
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "subtract",
+          "signature": "subtract(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 9,
+          "line_end": 10
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "multiply",
+          "signature": "multiply(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 14
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "divide",
+          "signature": "divide(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 17,
+          "line_end": 20
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "power",
+          "signature": "power(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 23,
+          "line_end": 24
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "square",
+          "signature": "square(value)",
+          "parameters": [
+            "value"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 27,
+          "line_end": 28
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "average",
+          "signature": "average(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 31,
+          "line_end": 32
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "absolute_difference",
+          "signature": "absolute_difference(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 35,
+          "line_end": 36
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "sum_of_squares",
+          "signature": "sum_of_squares(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 39,
+          "line_end": 40
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "percentage",
+          "signature": "percentage(value,percentage)",
+          "parameters": [
+            "value",
+            "percentage"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 43,
+          "line_end": 44
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "midpoint",
+          "signature": "midpoint(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 47,
+          "line_end": 48
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "CalculatorService",
+          "name": "ratio",
+          "signature": "ratio(a,b)",
+          "parameters": [
+            "a",
+            "b"
+          ],
+          "file": "app/services/calculator_service.py",
+          "language": "Python",
+          "line_start": 51,
+          "line_end": 54
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "app/services/conversion_service.py",
+      "name": "conversion_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 454,
+      "hash": "b86446b6dd0819b719209a3f9c536763a6a5cc0847f2d37057cae3465419175f",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "ConversionService",
+          "line_start": 1,
+          "line_end": 16,
+          "methods": [
+            {
+              "name": "celsius_to_fahrenheit",
+              "signature": "celsius_to_fahrenheit(value)",
+              "parameters": [
+                "value"
+              ],
+              "async": false,
+              "line_start": 7,
+              "line_end": 8
+            },
+            {
+              "name": "fahrenheit_to_celsius",
+              "signature": "fahrenheit_to_celsius(value)",
+              "parameters": [
+                "value"
+              ],
+              "async": false,
+              "line_start": 11,
+              "line_end": 12
+            },
+            {
+              "name": "kilometers_to_miles",
+              "signature": "kilometers_to_miles(cls,value)",
+              "parameters": [
+                "cls",
+                "value"
+              ],
+              "async": false,
+              "line_start": 15,
+              "line_end": 16
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "ConversionService",
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 16
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "ConversionService",
+          "name": "celsius_to_fahrenheit",
+          "signature": "celsius_to_fahrenheit(value)",
+          "parameters": [
+            "value"
+          ],
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 7,
+          "line_end": 8
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "ConversionService",
+          "name": "fahrenheit_to_celsius",
+          "signature": "fahrenheit_to_celsius(value)",
+          "parameters": [
+            "value"
+          ],
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 11,
+          "line_end": 12
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "ConversionService",
+          "name": "kilometers_to_miles",
+          "signature": "kilometers_to_miles(cls,value)",
+          "parameters": [
+            "cls",
+            "value"
+          ],
+          "file": "app/services/conversion_service.py",
+          "language": "Python",
+          "line_start": 15,
+          "line_end": 16
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "app/services/finance_service.py",
+      "name": "finance_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 612,
+      "hash": "d8f2d01e15fa4f29eae92cd6946927a7a0626a7709ae4d97238c5bb9b50bc765",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "FinanceService",
+          "line_start": 1,
+          "line_end": 22,
+          "methods": [
+            {
+              "name": "simple_interest",
+              "signature": "simple_interest(principal,annual_rate_percent,years)",
+              "parameters": [
+                "principal",
+                "annual_rate_percent",
+                "years"
+              ],
+              "async": false,
+              "line_start": 5,
+              "line_end": 10
+            },
+            {
+              "name": "compound_amount",
+              "signature": "compound_amount(principal,annual_rate_percent,years,compounds_per_year)",
+              "parameters": [
+                "principal",
+                "annual_rate_percent",
+                "years",
+                "compounds_per_year"
+              ],
+              "async": false,
+              "line_start": 13,
+              "line_end": 22
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "FinanceService",
+          "file": "app/services/finance_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 22
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "FinanceService",
+          "name": "simple_interest",
+          "signature": "simple_interest(principal,annual_rate_percent,years)",
+          "parameters": [
+            "principal",
+            "annual_rate_percent",
+            "years"
+          ],
+          "file": "app/services/finance_service.py",
+          "language": "Python",
+          "line_start": 5,
+          "line_end": 10
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "FinanceService",
+          "name": "compound_amount",
+          "signature": "compound_amount(principal,annual_rate_percent,years,compounds_per_year)",
+          "parameters": [
+            "principal",
+            "annual_rate_percent",
+            "years",
+            "compounds_per_year"
+          ],
+          "file": "app/services/finance_service.py",
+          "language": "Python",
+          "line_start": 13,
+          "line_end": 22
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "app/services/statistics_service.py",
+      "name": "statistics_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 1251,
+      "hash": "e2e4c133730ebe1f76af52b5dca171b9ecd3208e2e93d53574ecf79c39809fbb",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "StatisticsService",
+          "line_start": 4,
+          "line_end": 42,
+          "methods": [
+            {
+              "name": "mean",
+              "signature": "mean(values)",
+              "parameters": [
+                "values"
+              ],
+              "async": false,
+              "line_start": 8,
+              "line_end": 11
+            },
+            {
+              "name": "range_value",
+              "signature": "range_value(values)",
+              "parameters": [
+                "values"
+              ],
+              "async": false,
+              "line_start": 14,
+              "line_end": 17
+            },
+            {
+              "name": "median_value",
+              "signature": "median_value(values)",
+              "parameters": [
+                "values"
+              ],
+              "async": false,
+              "line_start": 20,
+              "line_end": 23
+            },
+            {
+              "name": "weighted_average",
+              "signature": "weighted_average(values,weights)",
+              "parameters": [
+                "values",
+                "weights"
+              ],
+              "async": false,
+              "line_start": 26,
+              "line_end": 42
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "StatisticsService",
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 4,
+          "line_end": 42
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "StatisticsService",
+          "name": "mean",
+          "signature": "mean(values)",
+          "parameters": [
+            "values"
+          ],
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 8,
+          "line_end": 11
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "StatisticsService",
+          "name": "range_value",
+          "signature": "range_value(values)",
+          "parameters": [
+            "values"
+          ],
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 14,
+          "line_end": 17
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "StatisticsService",
+          "name": "median_value",
+          "signature": "median_value(values)",
+          "parameters": [
+            "values"
+          ],
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 20,
+          "line_end": 23
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "StatisticsService",
+          "name": "weighted_average",
+          "signature": "weighted_average(values,weights)",
+          "parameters": [
+            "values",
+            "weights"
+          ],
+          "file": "app/services/statistics_service.py",
+          "language": "Python",
+          "line_start": 26,
+          "line_end": 42
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "statistics.median",
+          "type": "from_import",
+          "category": "standard_library"
+        }
+      ]
+    },
+    {
+      "path": "app/services/tax_service.py",
+      "name": "tax_service.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 448,
+      "hash": "d1986ef7a9998c986f864578fc6238af70f6d8a60165ce8f8947b44640f9f0bd",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [
+        {
+          "name": "TaxService",
+          "line_start": 1,
+          "line_end": 12,
+          "methods": [
+            {
+              "name": "tax_amount",
+              "signature": "tax_amount(amount,tax_percent)",
+              "parameters": [
+                "amount",
+                "tax_percent"
+              ],
+              "async": false,
+              "line_start": 5,
+              "line_end": 8
+            },
+            {
+              "name": "total_with_tax",
+              "signature": "total_with_tax(amount,tax_percent)",
+              "parameters": [
+                "amount",
+                "tax_percent"
+              ],
+              "async": false,
+              "line_start": 11,
+              "line_end": 12
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "symbols": [
+        {
+          "symbol_type": "class",
+          "name": "TaxService",
+          "file": "app/services/tax_service.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 12
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "TaxService",
+          "name": "tax_amount",
+          "signature": "tax_amount(amount,tax_percent)",
+          "parameters": [
+            "amount",
+            "tax_percent"
+          ],
+          "file": "app/services/tax_service.py",
+          "language": "Python",
+          "line_start": 5,
+          "line_end": 8
+        },
+        {
+          "symbol_type": "method",
+          "class_name": "TaxService",
+          "name": "total_with_tax",
+          "signature": "total_with_tax(amount,tax_percent)",
+          "parameters": [
+            "amount",
+            "tax_percent"
+          ],
+          "file": "app/services/tax_service.py",
+          "language": "Python",
+          "line_start": 11,
+          "line_end": 12
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "app/utils.py",
+      "name": "utils.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 966,
+      "hash": "109e907125f8d91f6c388f35187aaf4e20872cfb43c59c7d83b0c60192749503",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [],
+      "functions": [
+        {
+          "name": "clamp",
+          "signature": "clamp(value,minimum,maximum)",
+          "parameters": [
+            "value",
+            "minimum",
+            "maximum"
+          ],
+          "async": false,
+          "line_start": 1,
+          "line_end": 5
+        },
+        {
+          "name": "percentage_change",
+          "signature": "percentage_change(old_value,new_value)",
+          "parameters": [
+            "old_value",
+            "new_value"
+          ],
+          "async": false,
+          "line_start": 8,
+          "line_end": 12
+        },
+        {
+          "name": "normalize",
+          "signature": "normalize(value,minimum,maximum)",
+          "parameters": [
+            "value",
+            "minimum",
+            "maximum"
+          ],
+          "async": false,
+          "line_start": 15,
+          "line_end": 19
+        },
+        {
+          "name": "round_result",
+          "signature": "round_result(value,digits)",
+          "parameters": [
+            "value",
+            "digits"
+          ],
+          "async": false,
+          "line_start": 22,
+          "line_end": 24
+        }
+      ],
+      "symbols": [
+        {
+          "symbol_type": "function",
+          "name": "clamp",
+          "signature": "clamp(value,minimum,maximum)",
+          "parameters": [
+            "value",
+            "minimum",
+            "maximum"
+          ],
+          "file": "app/utils.py",
+          "language": "Python",
+          "line_start": 1,
+          "line_end": 5
+        },
+        {
+          "symbol_type": "function",
+          "name": "percentage_change",
+          "signature": "percentage_change(old_value,new_value)",
+          "parameters": [
+            "old_value",
+            "new_value"
+          ],
+          "file": "app/utils.py",
+          "language": "Python",
+          "line_start": 8,
+          "line_end": 12
+        },
+        {
+          "symbol_type": "function",
+          "name": "normalize",
+          "signature": "normalize(value,minimum,maximum)",
+          "parameters": [
+            "value",
+            "minimum",
+            "maximum"
+          ],
+          "file": "app/utils.py",
+          "language": "Python",
+          "line_start": 15,
+          "line_end": 19
+        },
+        {
+          "symbol_type": "function",
+          "name": "round_result",
+          "signature": "round_result(value,digits)",
+          "parameters": [
+            "value",
+            "digits"
+          ],
+          "file": "app/utils.py",
+          "language": "Python",
+          "line_start": 22,
+          "line_end": 24
+        }
+      ],
+      "dependencies": []
     },
     {
       "path": "project-manifest.json",
@@ -225,9 +1798,9 @@
       "extension": ".json",
       "type": "source",
       "language": "JSON",
-      "size": 7918,
-      "hash": "e38c5b1219ab265266775ee094374b00cc8cd22d6862b4c9ecf238c4553d9bdf",
-      "last_modified": "2026-10-05T14:50:40.065618+00:00",
+      "size": 64063,
+      "hash": "c9382eb52edcf964534f2714d972ddf27cb37ffe66202f9a6609b70b7463140d",
+      "last_modified": "2026-10-07T09:01:12.234636+00:00",
       "classes": [],
       "functions": [],
       "symbols": [],
@@ -239,38 +1812,170 @@
       "extension": ".py",
       "type": "source",
       "language": "Python",
-      "size": 395,
-      "hash": "47290b043cad5fd0d309594d2aab5c75b78605c724eb24af0ea383d1e0c3073b",
-      "last_modified": "2026-10-05T14:50:40.066614+00:00",
+      "size": 3332,
+      "hash": "11bae7de044200cd5c67d05b2db8648e3095ad76d46e640a3a39a15d91aae2f0",
+      "last_modified": "2026-10-07T03:25:50+00:00",
       "classes": [],
       "functions": [
+        {
+          "name": "test_root",
+          "signature": "test_root()",
+          "parameters": [],
+          "async": false,
+          "line_start": 8,
+          "line_end": 11
+        },
+        {
+          "name": "test_health_details",
+          "signature": "test_health_details()",
+          "parameters": [],
+          "async": false,
+          "line_start": 14,
+          "line_end": 17
+        },
         {
           "name": "test_add",
           "signature": "test_add()",
           "parameters": [],
           "async": false,
-          "line_start": 7,
-          "line_end": 10
+          "line_start": 20,
+          "line_end": 23
         },
         {
           "name": "test_divide_by_zero",
           "signature": "test_divide_by_zero()",
           "parameters": [],
           "async": false,
-          "line_start": 13,
-          "line_end": 15
+          "line_start": 26,
+          "line_end": 28
+        },
+        {
+          "name": "test_clamp",
+          "signature": "test_clamp()",
+          "parameters": [],
+          "async": false,
+          "line_start": 31,
+          "line_end": 37
+        },
+        {
+          "name": "test_percentage_change",
+          "signature": "test_percentage_change()",
+          "parameters": [],
+          "async": false,
+          "line_start": 40,
+          "line_end": 46
+        },
+        {
+          "name": "test_median",
+          "signature": "test_median()",
+          "parameters": [],
+          "async": false,
+          "line_start": 49,
+          "line_end": 52
+        },
+        {
+          "name": "test_weighted_average",
+          "signature": "test_weighted_average()",
+          "parameters": [],
+          "async": false,
+          "line_start": 55,
+          "line_end": 61
+        },
+        {
+          "name": "test_normalize",
+          "signature": "test_normalize()",
+          "parameters": [],
+          "async": false,
+          "line_start": 64,
+          "line_end": 70
+        },
+        {
+          "name": "test_ratio",
+          "signature": "test_ratio()",
+          "parameters": [],
+          "async": false,
+          "line_start": 73,
+          "line_end": 76
+        },
+        {
+          "name": "test_compound_amount",
+          "signature": "test_compound_amount()",
+          "parameters": [],
+          "async": false,
+          "line_start": 79,
+          "line_end": 90
+        },
+        {
+          "name": "test_celsius_to_fahrenheit",
+          "signature": "test_celsius_to_fahrenheit()",
+          "parameters": [],
+          "async": false,
+          "line_start": 93,
+          "line_end": 99
+        },
+        {
+          "name": "test_fahrenheit_to_celsius",
+          "signature": "test_fahrenheit_to_celsius()",
+          "parameters": [],
+          "async": false,
+          "line_start": 102,
+          "line_end": 108
+        },
+        {
+          "name": "test_kilometers_to_miles",
+          "signature": "test_kilometers_to_miles()",
+          "parameters": [],
+          "async": false,
+          "line_start": 111,
+          "line_end": 117
+        },
+        {
+          "name": "test_tax_amount",
+          "signature": "test_tax_amount()",
+          "parameters": [],
+          "async": false,
+          "line_start": 120,
+          "line_end": 126
+        },
+        {
+          "name": "test_total_with_tax",
+          "signature": "test_total_with_tax()",
+          "parameters": [],
+          "async": false,
+          "line_start": 129,
+          "line_end": 135
         }
       ],
       "symbols": [
         {
           "symbol_type": "function",
+          "name": "test_root",
+          "signature": "test_root()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 8,
+          "line_end": 11
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_health_details",
+          "signature": "test_health_details()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 14,
+          "line_end": 17
+        },
+        {
+          "symbol_type": "function",
           "name": "test_add",
           "signature": "test_add()",
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
-          "line_start": 7,
-          "line_end": 10
+          "line_start": 20,
+          "line_end": 23
         },
         {
           "symbol_type": "function",
@@ -279,8 +1984,128 @@
           "parameters": [],
           "file": "tests/test_main.py",
           "language": "Python",
-          "line_start": 13,
-          "line_end": 15
+          "line_start": 26,
+          "line_end": 28
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_clamp",
+          "signature": "test_clamp()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 31,
+          "line_end": 37
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_percentage_change",
+          "signature": "test_percentage_change()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 40,
+          "line_end": 46
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_median",
+          "signature": "test_median()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 49,
+          "line_end": 52
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_weighted_average",
+          "signature": "test_weighted_average()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 55,
+          "line_end": 61
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_normalize",
+          "signature": "test_normalize()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 64,
+          "line_end": 70
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_ratio",
+          "signature": "test_ratio()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 73,
+          "line_end": 76
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_compound_amount",
+          "signature": "test_compound_amount()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 79,
+          "line_end": 90
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_celsius_to_fahrenheit",
+          "signature": "test_celsius_to_fahrenheit()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 93,
+          "line_end": 99
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_fahrenheit_to_celsius",
+          "signature": "test_fahrenheit_to_celsius()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 102,
+          "line_end": 108
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_kilometers_to_miles",
+          "signature": "test_kilometers_to_miles()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 111,
+          "line_end": 117
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_tax_amount",
+          "signature": "test_tax_amount()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 120,
+          "line_end": 126
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_total_with_tax",
+          "signature": "test_total_with_tax()",
+          "parameters": [],
+          "file": "tests/test_main.py",
+          "language": "Python",
+          "line_start": 129,
+          "line_end": 135
         }
       ],
       "dependencies": [
@@ -291,6 +2116,156 @@
         },
         {
           "name": "app.main.app",
+          "type": "from_import",
+          "category": "internal"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_services.py",
+      "name": "test_services.py",
+      "extension": ".py",
+      "type": "source",
+      "language": "Python",
+      "size": 737,
+      "hash": "2d27443376e2df3e150f3c75c232fd48ead3cc8640315647f746232ab78d33b7",
+      "last_modified": "2026-10-07T03:25:50+00:00",
+      "classes": [],
+      "functions": [
+        {
+          "name": "test_calculator_ratio",
+          "signature": "test_calculator_ratio()",
+          "parameters": [],
+          "async": false,
+          "line_start": 7,
+          "line_end": 8
+        },
+        {
+          "name": "test_ratio_zero_denominator",
+          "signature": "test_ratio_zero_denominator()",
+          "parameters": [],
+          "async": false,
+          "line_start": 11,
+          "line_end": 13
+        },
+        {
+          "name": "test_statistics_median",
+          "signature": "test_statistics_median()",
+          "parameters": [],
+          "async": false,
+          "line_start": 16,
+          "line_end": 17
+        },
+        {
+          "name": "test_weighted_average_validation",
+          "signature": "test_weighted_average_validation()",
+          "parameters": [],
+          "async": false,
+          "line_start": 20,
+          "line_end": 22
+        },
+        {
+          "name": "test_finance_compound_amount",
+          "signature": "test_finance_compound_amount()",
+          "parameters": [],
+          "async": false,
+          "line_start": 25,
+          "line_end": 27
+        },
+        {
+          "name": "test_normalize",
+          "signature": "test_normalize()",
+          "parameters": [],
+          "async": false,
+          "line_start": 30,
+          "line_end": 31
+        }
+      ],
+      "symbols": [
+        {
+          "symbol_type": "function",
+          "name": "test_calculator_ratio",
+          "signature": "test_calculator_ratio()",
+          "parameters": [],
+          "file": "tests/test_services.py",
+          "language": "Python",
+          "line_start": 7,
+          "line_end": 8
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_ratio_zero_denominator",
+          "signature": "test_ratio_zero_denominator()",
+          "parameters": [],
+          "file": "tests/test_services.py",
+          "language": "Python",
+          "line_start": 11,
+          "line_end": 13
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_statistics_median",
+          "signature": "test_statistics_median()",
+          "parameters": [],
+          "file": "tests/test_services.py",
+          "language": "Python",
+          "line_start": 16,
+          "line_end": 17
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_weighted_average_validation",
+          "signature": "test_weighted_average_validation()",
+          "parameters": [],
+          "file": "tests/test_services.py",
+          "language": "Python",
+          "line_start": 20,
+          "line_end": 22
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_finance_compound_amount",
+          "signature": "test_finance_compound_amount()",
+          "parameters": [],
+          "file": "tests/test_services.py",
+          "language": "Python",
+          "line_start": 25,
+          "line_end": 27
+        },
+        {
+          "symbol_type": "function",
+          "name": "test_normalize",
+          "signature": "test_normalize()",
+          "parameters": [],
+          "file": "tests/test_services.py",
+          "language": "Python",
+          "line_start": 30,
+          "line_end": 31
+        }
+      ],
+      "dependencies": [
+        {
+          "name": "pytest",
+          "type": "import",
+          "category": "external"
+        },
+        {
+          "name": "app.services.CalculatorService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.FinanceService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.services.StatisticsService",
+          "type": "from_import",
+          "category": "internal"
+        },
+        {
+          "name": "app.utils.normalize",
           "type": "from_import",
           "category": "internal"
         }
@@ -309,14 +2284,15 @@
       "task_run_id": "RUN-004",
       "git": {
         "branch": "main",
-        "commit_sha": "a3c791e637cef926712f5f9f7a8be7366adb36ca"
+        "commit_sha": "3b430dbb8ec9d6e2546277acb00ee5fa75f02e5f"
       },
-      "mapped_at": "2026-10-05T20:20:49+05:30",
+      "mapped_at": "2026-10-07T14:31:15+05:30",
       "code_reference": null,
       "unresolved_code_reference": {
         "file": "sample_service.py",
         "class_name": "UserService",
-        "symbol": "create_user"
+        "symbol": "create_user",
+        "reason": "No unique matching symbol was found in symbols.json."
       }
     }
   ]

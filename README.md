@@ -1,73 +1,117 @@
 # Calculator FastAPI Project
 
-Simple calculator API built with FastAPI.
+A FastAPI calculator project designed for CoZo manifest-generation,
+source synchronization, traceability, validation, and GitHub push testing.
 
-## Endpoints
-- `GET /`
-- `POST /add`
-- `POST /subtract`
-- `POST /multiply`
-- `POST /divide`
+## Version
 
-Request body example:
+Current test version: **1.5.0**
 
-```json
-{
-  "a": 10,
-  "b": 5
-}
+## V3 purpose
+
+V3 intentionally changes every tracked source/support file and adds new files so
+you can verify the full flow:
+
+```text
+local source
+→ /generate-manifest
+→ /client/prepare-and-push-project
+→ GitHub
 ```
 
-## Run locally
+## V3 project structure
+
+```text
+app/
+├── __init__.py
+├── config.py
+├── main.py
+├── models.py
+├── utils.py
+└── services/
+    ├── __init__.py
+    ├── calculator_service.py
+    ├── finance_service.py
+    └── statistics_service.py
+
+docs/
+└── ARCHITECTURE.md
+
+tests/
+├── test_main.py
+└── test_services.py
+```
+
+## New V3 endpoints
+
+- `POST /median`
+- `POST /weighted-average`
+- `POST /normalize`
+- `POST /ratio`
+- `POST /compound-amount`
+
+Existing endpoints remain available.
+
+## Generate manifest
+
+Use the local V3 folder with `/generate-manifest`.
+
+## Run tests
 
 ```bash
-python -m venv .venv
-# Windows
-.venv\\Scripts\\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+python -m pytest tests
 ```
 
-Open Swagger UI at `http://127.0.0.1:8000/docs`.
+## Verification
 
-## Tests
+See `COZO_TEST_VERIFICATION.md` for the exact files, classes, methods, and
+endpoints that should appear in the generated manifest and later on GitHub.
 
-```bash
-pytest
-```
 
-## GitHub push note
-This repository is configured with:
+## V4 selective-change test
 
-`origin = https://github.com/VKPveer/calculator_fastapi_project.git`
+V4 intentionally changes only a subset of the V3 files and adds exactly one
+new Python service file. This makes it easy to verify selective source sync.
 
-If GitHub already contains an initial commit, a direct `git push origin master` can be rejected as a non-fast-forward update. Run one of the included sync scripts first:
+### New V4 file
 
-Windows CMD:
-`git_sync_and_push.bat`
+- `app/services/conversion_service.py`
 
-PowerShell:
-`powershell -ExecutionPolicy Bypass -File .\git_sync_and_push.ps1`
+### New V4 endpoints
 
-The script fetches the existing remote `master`, merges it safely (including unrelated initial histories), and then pushes the project.
+- `POST /celsius-to-fahrenheit`
+- `POST /fahrenheit-to-celsius`
+- `POST /kilometers-to-miles`
 
-## Automatic non-fast-forward fix
+Files such as `app/models.py`, `app/utils.py`,
+`app/services/calculator_service.py`, `app/services/statistics_service.py`,
+`app/services/finance_service.py`, and `tests/test_services.py` are intentionally
+left unchanged from V3.
 
-This package includes a Git `post-commit` hook at `.git/hooks/post-commit`.
-When an external API commits changes and then runs `git push origin master`, the hook first fetches `origin/master`, incorporates remote history (including a GitHub-created initial README commit), and pushes the synchronized history. The API's following normal push should therefore succeed instead of returning a non-fast-forward / fetch-first error.
 
-### One-time manual preparation (recommended after extracting)
+## V5 selective-change test
 
-Run either:
+V5 intentionally changes only a small subset of V4 and adds exactly one new
+service file so CoZo selective source synchronization can be verified.
 
-```bat
-prepare_repo_for_push.bat
-```
+### New V5 file
 
-or:
+- `app/services/tax_service.py`
 
-```powershell
-powershell -ExecutionPolicy Bypass -File .\prepare_repo_for_push.ps1
-```
+### New V5 endpoints
 
-After that, your API can keep using a normal `git push origin master`.
+- `POST /tax-amount`
+- `POST /total-with-tax`
+
+### Existing files intentionally changed in V5
+
+- `app/config.py`
+- `app/__init__.py`
+- `app/models.py`
+- `app/main.py`
+- `tests/test_main.py`
+- `README.md`
+- `CHANGELOG.md`
+- `COZO_TEST_VERIFICATION.md`
+
+All other V4 source/support files are intentionally left unchanged.

@@ -3,8 +3,8 @@ setlocal
 cd /d "%~dp0"
 
 echo ==============================================
-echo Calculator FastAPI - One-time Git Sync
- echo ==============================================
+echo Calculator FastAPI V3 - One-time Git Sync
+echo ==============================================
 
 git remote get-url origin >nul 2>&1
 if errorlevel 1 (
@@ -26,20 +26,19 @@ git merge origin/master --allow-unrelated-histories -X ours --no-edit
 if errorlevel 1 goto :merge_failed
 
 :push
-echo Pushing synchronized repository...
+echo Pushing synchronized V3 repository...
 git push origin master
 if errorlevel 1 goto :push_failed
 
-echo.
-echo SUCCESS: Repository is synchronized. The /git/commit-push API can now use normal git push origin master.
+echo SUCCESS: V3 repository is synchronized.
 exit /b 0
 
 :fetch_failed
-echo ERROR: Could not fetch origin/master. Check internet/GitHub access.
+echo ERROR: Could not fetch origin/master.
 exit /b 1
 
 :merge_failed
-echo ERROR: Automatic merge failed. Run git status to inspect conflicts.
+echo ERROR: Automatic merge failed. Run git status.
 exit /b 1
 
 :push_failed

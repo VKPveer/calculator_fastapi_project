@@ -1,48 +1,58 @@
-# CoZo V4 Selective-Change Verification Map
+# CoZo V3 Test Verification Map
 
-V4 is designed to verify that CoZo syncs only changed/new files rather than
-rewriting the whole repository.
+After `/generate-manifest`, verify the manifest contains all of these.
 
-## Exactly one new source file
-
-- `app/services/conversion_service.py`
-  - class `ConversionService`
-  - `celsius_to_fahrenheit`
-  - `fahrenheit_to_celsius`
-  - `kilometers_to_miles`
-
-## Existing files intentionally changed
+## New files
 
 - `app/config.py`
-- `app/__init__.py`
-- `app/main.py`
-- `tests/test_main.py`
-- `README.md`
-- `CHANGELOG.md`
-- `COZO_TEST_VERIFICATION.md`
-
-## Existing files intentionally NOT changed
-
-- `app/models.py`
-- `app/utils.py`
-- `app/services/__init__.py`
-- `app/services/calculator_service.py`
-- `app/services/statistics_service.py`
 - `app/services/finance_service.py`
 - `tests/test_services.py`
-- `requirements.txt`
-- `.gitignore`
 - `docs/ARCHITECTURE.md`
-- Git helper scripts
 
-## New API endpoints expected in app/main.py
+## Updated source symbols
 
-- `POST /celsius-to-fahrenheit`
-- `POST /fahrenheit-to-celsius`
-- `POST /kilometers-to-miles`
+### app/config.py
+- `AppConfig`
+- `CONFIG`
 
-## Expected GitHub source changes after sync
+### app/models.py
+- `CalculationRequest`
+- `ClampRequest`
+- `PercentageChangeRequest`
+- `PercentageRequest`
+- `ValuesRequest`
+- `WeightedAverageRequest`
+- `CompoundInterestRequest`
+- `NormalizeRequest`
 
-The source-sync commit should show the changed files above plus the newly
-generated `project-manifest.json`. Unchanged files should retain their previous
-Git commit timestamp/history.
+### app/services/calculator_service.py
+- `CalculatorService.midpoint`
+- `CalculatorService.ratio`
+
+### app/services/statistics_service.py
+- `StatisticsService.median_value`
+- `StatisticsService.weighted_average`
+
+### app/services/finance_service.py
+- `FinanceService.simple_interest`
+- `FinanceService.compound_amount`
+
+### app/utils.py
+- `normalize`
+- `round_result`
+
+### app/main.py
+- `median_value`
+- `weighted_average`
+- `normalize_value`
+- `ratio`
+- `compound_amount`
+
+## New tests
+
+`tests/test_services.py` should contain service-level tests.
+
+## GitHub verification after client sync
+
+The GitHub commit should show changes to every tracked source/support file plus
+the newly generated `project-manifest.json`.

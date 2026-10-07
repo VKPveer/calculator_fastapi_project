@@ -8,12 +8,10 @@ from app.models import (
     NormalizeRequest,
     PercentageChangeRequest,
     PercentageRequest,
-    SingleNumberRequest,
     ValuesRequest,
     WeightedAverageRequest,
 )
 from app.services import CalculatorService, FinanceService, StatisticsService
-from app.services.conversion_service import ConversionService
 from app.utils import clamp, normalize, percentage_change, round_result
 
 app = FastAPI(
@@ -275,45 +273,4 @@ def compound_amount(req: CompoundInterestRequest):
         "years": req.years,
         "compounds_per_year": req.compounds_per_year,
         "result": round_result(result, 2),
-    }
-
-
-# =========================================================
-# V4 conversion endpoints
-# =========================================================
-
-
-@app.post("/celsius-to-fahrenheit")
-def celsius_to_fahrenheit(req: SingleNumberRequest):
-    return {
-        "operation": "celsius_to_fahrenheit",
-        "value": req.value,
-        "result": round_result(
-            ConversionService.celsius_to_fahrenheit(req.value),
-            2,
-        ),
-    }
-
-
-@app.post("/fahrenheit-to-celsius")
-def fahrenheit_to_celsius(req: SingleNumberRequest):
-    return {
-        "operation": "fahrenheit_to_celsius",
-        "value": req.value,
-        "result": round_result(
-            ConversionService.fahrenheit_to_celsius(req.value),
-            2,
-        ),
-    }
-
-
-@app.post("/kilometers-to-miles")
-def kilometers_to_miles(req: SingleNumberRequest):
-    return {
-        "operation": "kilometers_to_miles",
-        "value": req.value,
-        "result": round_result(
-            ConversionService.kilometers_to_miles(req.value),
-            4,
-        ),
     }

@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_root():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json()["version"] == "1.3.0"
+    assert response.json()["version"] == "1.5.0"
 
 
 def test_health_details():
@@ -88,3 +88,48 @@ def test_compound_amount():
     )
     assert response.status_code == 200
     assert response.json()["result"] == 1210
+
+
+def test_celsius_to_fahrenheit():
+    response = client.post(
+        "/celsius-to-fahrenheit",
+        json={"value": 0},
+    )
+    assert response.status_code == 200
+    assert response.json()["result"] == 32
+
+
+def test_fahrenheit_to_celsius():
+    response = client.post(
+        "/fahrenheit-to-celsius",
+        json={"value": 212},
+    )
+    assert response.status_code == 200
+    assert response.json()["result"] == 100
+
+
+def test_kilometers_to_miles():
+    response = client.post(
+        "/kilometers-to-miles",
+        json={"value": 10},
+    )
+    assert response.status_code == 200
+    assert response.json()["result"] == 6.2137
+
+
+def test_tax_amount():
+    response = client.post(
+        "/tax-amount",
+        json={"amount": 200, "tax_percent": 10},
+    )
+    assert response.status_code == 200
+    assert response.json()["result"] == 20
+
+
+def test_total_with_tax():
+    response = client.post(
+        "/total-with-tax",
+        json={"amount": 200, "tax_percent": 10},
+    )
+    assert response.status_code == 200
+    assert response.json()["result"] == 220

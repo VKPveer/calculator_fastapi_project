@@ -46,3 +46,8 @@ class NormalizeRequest(BaseModel):
     value: float
     minimum: float
     maximum: float
+
+
+class TaxRequest(BaseModel):
+    amount: float
+    tax_percent: float

@@ -8,10 +8,14 @@ from app.models import (
     NormalizeRequest,
     PercentageChangeRequest,
     PercentageRequest,
+    SingleNumberRequest,
+    TaxRequest,
     ValuesRequest,
     WeightedAverageRequest,
 )
 from app.services import CalculatorService, FinanceService, StatisticsService
+from app.services.conversion_service import ConversionService
+from app.services.tax_service import TaxService
 from app.utils import clamp, normalize, percentage_change, round_result
 
 app = FastAPI(
@@ -272,5 +276,87 @@ def compound_amount(req: CompoundInterestRequest):
         "annual_rate_percent": req.annual_rate_percent,
         "years": req.years,
         "compounds_per_year": req.compounds_per_year,
+        "result": round_result(result, 2),
+    }
+
+
+# =========================================================
+# V4 conversion endpoints
+# =========================================================
+
+
+@app.post("/celsius-to-fahrenheit")
+def celsius_to_fahrenheit(req: SingleNumberRequest):
+    return {
+        "operation": "celsius_to_fahrenheit",
+        "value": req.value,
+        "result": round_result(
+            ConversionService.celsius_to_fahrenheit(req.value),
+            2,
+        ),
+    }
+
+
+@app.post("/fahrenheit-to-celsius")
+def fahrenheit_to_celsius(req: SingleNumberRequest):
+    return {
+        "operation": "fahrenheit_to_celsius",
+        "value": req.value,
+        "result": round_result(
+            ConversionService.fahrenheit_to_celsius(req.value),
+            2,
+        ),
+    }
+
+
+@app.post("/kilometers-to-miles")
+def kilometers_to_miles(req: SingleNumberRequest):
+    return {
+        "operation": "kilometers_to_miles",
+        "value": req.value,
+        "result": round_result(
+            ConversionService.kilometers_to_miles(req.value),
+            4,
+        ),
+    }
+
+
+# =========================================================
+# V5 tax endpoints
+# =========================================================
+
+
+@app.post("/tax-amount")
+def tax_amount(req: TaxRequest):
+    try:
+        result = TaxService.tax_amount(
+            req.amount,
+            req.tax_percent,
+        )
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "operation": "tax_amount",
+        "amount": req.amount,
+        "tax_percent": req.tax_percent,
+        "result": round_result(result, 2),
+    }
+
+
+@app.post("/total-with-tax")
+def total_with_tax(req: TaxRequest):
+    try:
+        result = TaxService.total_with_tax(
+            req.amount,
+            req.tax_percent,
+        )
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+
+    return {
+        "operation": "total_with_tax",
+        "amount": req.amount,
+        "tax_percent": req.tax_percent,
         "result": round_result(result, 2),
     }
